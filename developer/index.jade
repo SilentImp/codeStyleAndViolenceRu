@@ -214,15 +214,6 @@ block slides
 
   article.illustration.illustration--editorconfig
 
-  article.center.qrcode.var-6
-      .wrapper
-          .half
-              h2 EditorConfig
-          .half
-              img(src="images/editorconfig_link.svg", alt="QRCODE with link to eslint")
-          p
-              a(href="http://editorconfig.org/", data-click=true) http://editorconfig.org/
-
   article.center.code-9
     .wrapper
       pre
@@ -253,15 +244,13 @@ block slides
   article.screen.screen--ws-editorconfig
 
   article.center.qrcode.var-6
-    .wrapper
-        .half
-            h2 ESLint
-        .half
-            img(src="images/gitlab-flow-link.svg", alt="QRCODE with link to eslint")
-        p
-            a(href="https://eslint.org/", data-click=true) https://eslint.org/
-
-          
+      .wrapper
+          .half
+              h2 EditorConfig
+          .half
+              img(src="images/editorconfig_link.svg", alt="QRCODE with link to eslint")
+          p
+              a(href="http://editorconfig.org/", data-click=true) http://editorconfig.org/
 
   article.illustration.illustration--eslint
 
@@ -309,6 +298,28 @@ block slides
             ]
           }
 
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          $ npm info 
+              "eslint-config-airbnb@latest" 
+              peerDependencies
+
+          { eslint: '^3.19.0 || ^4.3.0',
+            'eslint-plugin-jsx-a11y': '^5.1.1',
+            'eslint-plugin-import': '^2.7.0',
+            'eslint-plugin-react': '^7.1.0' }
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D eslint-plugin-react@latest
+          $ npm i -D eslint-plugin-import@latest
+          $ npm i -D eslint-plugin-jsx-a11y@latest
+          $ npm i -D eslint-config-airbnb@latest
+
   article.center.code-2
     .wrapper
       pre
@@ -342,29 +353,6 @@ block slides
               "es6": true,
             },
           }
-
-  article.center.code-0
-    .wrapper
-      pre
-        code.bash.
-          $ npm info 
-              "eslint-config-airbnb@latest" 
-              peerDependencies
-
-          { eslint: '^3.19.0 || ^4.3.0',
-            'eslint-plugin-jsx-a11y': '^5.1.1',
-            'eslint-plugin-import': '^2.7.0',
-            'eslint-plugin-react': '^7.1.0' }
-
-  article.center.code-0
-    .wrapper
-      pre
-        code.bash.
-          $ npm i -D eslint@latest
-          $ npm i -D eslint-plugin-react@latest
-          $ npm i -D eslint-plugin-import@latest
-          $ npm i -D eslint-plugin-jsx-a11y@latest
-          $ npm i -D eslint-config-airbnb@latest
 
   article.center.code-7
     .wrapper
@@ -633,7 +621,7 @@ block slides
 
   article.illustration.illustration--ws
 
-  article.screen.screen--ws-preferences
+  article.screen.screen--ws-stylelint
 
   article.screen.screen--ws-errors
 
@@ -736,8 +724,6 @@ block slides
       p.wrapper But are hooks enought?
     .subtitle  
       p — No
-
-  article.screen.screen--husky-message
 
   article.illustration.illustration-gitlab
 
