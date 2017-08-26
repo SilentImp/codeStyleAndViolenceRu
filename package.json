@@ -6,6 +6,7 @@
   "scripts": {
     "images":"gulp images",
     "gulp": "gulp",
+    "deploy": "gulp deploy",
     "bi": "bower install"
   },
   "dependencies": {
