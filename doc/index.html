@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><title>Code Style and Vilance</title><link href="css/styles.css" rel="stylesheet"><script data-main="js/presentation" src="js/requirejs/require.js"></script></head><body><form class="go-to-page" action="/select/slide" method="post"><fieldset><input type="text" maxlength="3" value="" placeholder="1"></fieldset></form><section class="progress"><div class="value"></div></section><section class="dark" id="slides"><article class="cover"><h1 class="left">Code Style <b>and</b></h1><h1 class="right">Vilance</h1></article><article class="illustration illustration-h1 cloud center why"><h1><p class="wrapper"> <b>Code Style</b></p></h1></article><article class="illustration illustration-h1 cloud center why"><h1><p class="wrapper"> <b>Why </b><br>in the world <br>we may want it?!</p></h1></article><article class="illustration illustration-b1"><div class="subtitle"> <p>— Well, it's fine to write whatever you want while you work alone.</p></div></article><article class="illustration illustration-h2"><div class="subtitle"> <p>— But then your team start to grow …</p></div></article><article class="illustration illustration-b2"></article><article class="illustration illustration-h25"><div class="subtitle"> <p>… and more …</p></div></article><article class="illustration illustration-b25"></article><article class="illustration illustration-h3"><div class="subtitle"> <p>… and even more …</p></div></article><article class="illustration illustration-b3"></article><article class="illustration illustration-h4"><div class="subtitle"> <p>… and more …</p></div></article><article class="illustration illustration-b4"><div class="subtitle"> <p>… and …</p></div></article><article class="illustration illustration-b5"><div class="subtitle"> <p>… and then you, finally, realise that you need rules.</p></div></article><article class="center list-1"><div class="wrapper"><h1>What kind of rules<br>do we need?</h1><ul><li>Scripts <b>(ECMA X, TypeScript, Kotlin, etc. )</b></li><li>Styles <b>(CSS, PostCSS, Sass, Less, Stylus, etc.)</b></li><li>Workflow <b>(git flow, github flow, gitlab flow, etc.)</b></li></ul></div><div class="subtitle"> <p>— We need to cover scripts, styles and workflow</p></div></article><article class="center list-2"><div class="wrapper"><h1>Workflow includes</h1><ul><li>Process</li><li>Branch naming</li><li>Commits naming</li></ul></div></article><article class="choose cloud center"><h1> <p class="wrapper">How to <br>choose <br>style<br>guide?</p></h1></article><article class="lazy cloud center"><h1> <p class="wrapper">It should be maintained by someone else</p></h1><div class="subtitle"><p>— Because we don't want to build a better world, we want to build an app, get our money, then buy a rifle and … but where was I?</p></div></article><article class="lazy lazy--trendy cloud center"><h1> <p class="wrapper">And it <br>should be trendy</p></h1><div class="subtitle"><p>— Because it increase your team mates value as a developers and thas it would be easier to implement</p></div></article><article class="choose choose-2 cloud center"><h1> <p class="wrapper">Anything<br>else?</p></h1></article><article class="lazy lazy--nope cloud center"><h1> <p class="wrapper">NO</p></h1><div class="subtitle"><p>— It does not matter if you use spaces or tabs: your text editor can handle any of them. Only thing is matter — code uniformity.</p></div></article><article class="illustration illustration-airbnb"></article><article class="center qrcode var-2"><div class="wrapper"><div class="half"><h2>Airbnb JavaScript Style Guide</h2></div><div class="half"><img src="images/airbnb_js.svg" alt="QRCODE with link to Airbnb js style guide"></div><p><a href="https://github.com/airbnb/javascript" data-click>https://github.com/airbnb/javascript</a></p></div></article><article class="center qrcode var-2"><div class="wrapper"><div class="half"><h2>Airbnb CSS Style Guide</h2></div><div class="half"><img src="images/airbnb_js.svg" alt="QRCODE with link to Airbnb js style guide"></div><p><a href="https://github.com/airbnb/css" data-click>https://github.com/airbnb/css</a></p></div></article><article class="illustration illustration-standard"></article><article class="center qrcode var-2"><div class="wrapper"><div class="half"><h2>Standard JavaScript Style Guide</h2></div><div class="half"><img src="images/standard_js.svg" alt="QRCODE with link to Airbnb js style guide"></div><p><a href="https://github.com/standard/standard" data-click>https://github.com/standard/standard</a></p></div></article><article class="illustration illustration-git-flow"></article><article class="center qrcode var-2"><div class="wrapper"><div class="half"><h2>A successful Git branching model</h2></div><div class="half"><img src="images/git-flow-link.svg" alt="QRCODE with link to original gitflow article"></div><p><a href="http://nvie.com/posts/a-successful-git-branching-model/" data-click>https://goo.gl/GDaF  </a></p></div></article><article class="illustration illustration-github"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>GitHub<br>branching model</h2></div><div class="half"><img src="images/github-flow-link.svg" alt="QRCODE with link to original gitflow article"></div><p><a href="https://githubflow.github.io/" data-click>https://githubflow.github.io/</a></p></div></article><article class="illustration illustration-gitlab"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>GitLab<br>branching model</h2></div><div class="half"><img src="images/gitlab-flow-link.svg" alt="QRCODE with link to original gitflow article"></div><p><a href="https://about.gitlab.com/2014/09/29/gitlab-flow/" data-click>https://goo.gl/Z0w1nQ</a></p></div></article><article class="choose choose-3 cloud center"><h1> <p class="wrapper">And<br>that's<br>it?</p></h1></article><article class="illustration illustration--indian"><div class="subtitle"> <p>— Your teammates from India are running to implement code style you have selected. The struggle to do it!</p></div></article><article class="illustration illustration--indian"><div class="subtitle"><p>— Actually no, they don't. Nobody want your code style.</p></div></article><article class="artist cloud center"><h1> <p class="wrapper">I am an artist!<br>Don't restrict me!</p></h1><div class="subtitle"> <p>— You need to preset, check, automatize and force code style, </p><p>otherwise there would be none.</p></div></article><article class="illustration illustration--editorconfig"></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ vi .editorconfig
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code>[*]
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+</code></pre></div></article><article class="illustration illustration--atom"></article><article class="screen screen--atom-editorconfig"></article><article class="screen screen--atom-editorconfig-error"></article><article class="illustration illustration--ws"></article><article class="screen screen--ws-editorconfig"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>EditorConfig</h2></div><div class="half"><img src="images/editorconfig_link.svg" alt="QRCODE with link to eslint"></div><p><a href="http://editorconfig.org/" data-click>http://editorconfig.org/</a></p></div></article><article class="illustration illustration--eslint"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>ESLint</h2></div><div class="half"><img src="images/gitlab-flow-link.svg" alt="QRCODE with link to eslint"></div><p><a href="https://eslint.org/" data-click>https://eslint.org/</a></p></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ sudo npm i -g eslint
+$ npm i -D eslint
+</code></pre></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ eslint --init
+</code></pre></div></article><article class="screen screen--eslint-init"></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ vi .eslintrc
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">// .eslintrc
+{
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ]
+}
+</code></pre></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">$ npm info 
+    "eslint-config-airbnb@latest" 
+    peerDependencies
+
+{ eslint: '^3.19.0 || ^4.3.0',
+  'eslint-plugin-jsx-a11y': '^5.1.1',
+  'eslint-plugin-import': '^2.7.0',
+  'eslint-plugin-react': '^7.1.0' }
+</code></pre></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">$ npm i -D eslint-plugin-react@latest
+$ npm i -D eslint-plugin-import@latest
+$ npm i -D eslint-plugin-jsx-a11y@latest
+$ npm i -D eslint-config-airbnb@latest
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="javascript">// .eslintrc
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ]
+}
+</code></pre></div></article><article class="center code-3"><div class="wrapper"><pre><code class="javascript">// .eslintrc
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+  },
+}
+</code></pre></div></article><article class="center code-7"><div class="wrapper"><pre><code class="bash">$ npm i -D babel-eslint@latest
+</code></pre></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ eslint ./source
+    --color 
+    --format stylish
+</code></pre></div></article><article class="screen screen--eslint-errors"></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ eslint ./source
+    --color 
+    --format stylish
+    --fix
+</code></pre></div></article><article class="screen screen--eslint-better"></article><article class="center code-1"><div class="wrapper"><pre><code class="js">// package.json
+{ // …
+  "scripts": {
+    "lint:js": "eslint ./source 
+                  --color 
+                  --format stylish 
+                  --fix"
+  }
+}
+</code></pre></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ npm run lint:js
+</code></pre></div></article><article class="change cloud center"><h1> <p class="wrapper">So,<br>should I run it after each change?</p></h1><div class="subtitle"> <p>— To see problems on the fly you should configure your editor</p></div></article><article class="illustration illustration--atom"></article><article class="screen screen--eslint-atom"></article><article class="screen screen--eslint-atom-fix"></article><article class="screen screen--eslint-atom-error"></article><article class="illustration illustration--ws"></article><article class="screen screen--ws-preferences"></article><article class="screen screen--ws-eslint"></article><article class="screen screen--ws-eslint-fix"></article><article class="screen screen--ws-eslint-error"></article><article class="think cloud center"><h1> <p class="wrapper">Nice,<br>but what if I'll ignore linter errors all together?</p></h1><div class="subtitle"> <p>— Then I should, obviously, use…</p></div></article><article class="illustration illustration--hook cloud center hook"><h1> <p class="wrapper">Hook</p></h1></article><article class="center code-7"><div class="wrapper"><pre><code class="bash">#!/bin/bash
+# .git/hooks/pre-commit
+if !(npm run lint:js --silent) then
+  exit 1;
+fi
+</code></pre></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Source Control<br>Integrations</h2></div><div class="half"><img src="images/hook.svg" alt="QRCODE with link"></div><p><a href="https://eslint.org/docs/user-guide/integrations#source-control" data-click>http://bit.ly/2w5y30Q</a></p></div></article><article class="think cloud center"><h1> <p class="wrapper">Do you belive that I will create pre-commit by myself?</p></h1></article><article class="think cloud center"><h1> <p class="wrapper">You can't store hooks with a repo, you know.</p></h1></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ npm i -D lint-staged
+$ npm i -D husky
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="js">// package.json
+{ // …
+  "scripts": { // …
+    "precommit": "lint-staged"
+  },
+  "lint-staged": { // …
+    "*.{js,jsx}": "eslint"
+  }
+}
+</code></pre></div></article><article class="screen screen--husky"></article><article class="think think--swear cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;</p></h1></article><article class="talk cloud center"><h1> <p class="wrapper">What about styles?</p></h1></article><article class="screen screen--stylelint"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Stylelint</h2></div><div class="half"><img src="images/stylelint_link.svg" alt="QRCODE with link"></div><p><a href="https://stylelint.io/" data-click>https://stylelint.io/</a></p></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">$ sudo npm i -g stylelint
+$ npm i -D stylelint
+$ npm i -D stylelint-config-standard
+$ vi .stylelintrc
+</code></pre></div></article><article class="center code-0"><div class="wrapper"><pre><code class="js">{
+  "syntax": "less",
+  "extends": "stylelint-config-standard",
+  "rules": {
+    // …
+  }
+}
+</code></pre></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config Issue</h2></div><div class="half"><img src="images/stylelint-airbnb-issue.svg" alt="QRCODE with link"></div><p><a href="https://github.com/airbnb/css/pull/23" data-click>http://bit.ly/2vwHKlK</a></p></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">npm i -D stylelint-scss
+npm i -D stylelint-selector-bem-pattern
+</code></pre></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config #1</h2></div><div class="half"><img src="images/stylelint-airbnb-1.svg" alt="QRCODE with link"></div><p><a href="https://gist.github.com/DanielaValero/b3a72b2f3d0c85c1985d5d2d7497f347" data-click>http://bit.ly/2vwQmsD</a></p></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config #2</h2></div><div class="half"><img src="images/stylelint-airbnb-2.svg" alt="QRCODE with link"></div><p><a href="https://gist.github.com/SilentImp/64d8daa0d890e6ba4aa00d5dc2c273d8" data-click>http://bit.ly/2wGfVMU</a></p></div></article><article class="center code-6"><div class="wrapper"><pre><code class="bash">stylelint ./src/**/*.less 
+            --syntax less 
+            --color 
+            --formatter verbose
+</code></pre></div></article><article class="screen screen--stylelint-error"></article><article class="center code-6"><div class="wrapper"><pre><code class="bash">stylelint ./src/**/*.less 
+            --syntax less 
+            --color 
+            --formatter verbose
+            --fix
+</code></pre></div></article><article class="screen screen--stylelint-fix"></article><article class="center code-2"><div class="wrapper"><pre><code class="js">// package.json
+{ // …
+  "scripts": {
+    "lint:less": "stylelint ./src/**/*.less 
+                            --syntax less 
+                            --color 
+                            --formatter verbose
+                            --fix"
+  }
+}
+</code></pre></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ npm run lint:less
+</code></pre></div></article><article class="illustration illustration--atom"></article><article class="screen screen--sytlelint-atom"></article><article class="illustration illustration--ws"></article><article class="screen screen--ws-stylelint"></article><article class="screen screen--ws-errors"></article><article class="talk talk--2 cloud center"><h1> <p class="wrapper">But you will not use hooks, right?</p></h1><div class="subtitle"> <p>— I definitely will</p></div></article><article class="center code-1"><div class="wrapper"><pre><code class="js">// package.json
+{ // …
+  "scripts": { // …
+    "precommit": "lint-staged"
+  },
+  "lint-staged": { // …
+    "*.less": "stylelint"
+  }
+}
+</code></pre></div></article><article class="screen screen--husky-less"></article><article class="talk talk--3 cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589; &#x2589;&#x2589; &#x2589;<br>&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;</p></h1><h2><p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;</p></h2></article><article class="flow cloud center"><h1> <p class="wrapper">What about flow?</p></h1><div class="subtitle"> <p>— More hooks…</p></div></article><article class="flow-demo"><div class="wrapper"></div></article><article class="center code-7"><div class="wrapper"><pre><code class="bash">vi ./hooks/commit-msg
+chmod 0755 ./hooks/commit-msg
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="bash">#!/bin/bash
+MESSAGE=`cat "$1"`;
+if (![[ "$MESSAGE" =~ ^[A-Z]+-[0-9]+\ -\ .*$ ]]) 
+  && [ "$MESSAGE" != "merge" ]; 
+  then 
+    echo "Wrong commit message format."; 
+    exit 1;
+fi
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="bash">if [[ "$MESSAGE" =~ ([а-яА-Я]+) ]]; then 
+  echo "Don't use russian for commit message."; 
+  exit 2;
+fi
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="bash">if (![[ "$MESSAGE" =~ ^[A-Z]+-[0-9]+\ -\ .{5,}$ ]]) 
+  && [ "$MESSAGE" != "merge" ]; then 
+    echo "Commit message is too short, 
+          try to be more descriptive."; 
+    exit 3;
+fi
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="js">// package.json
+{ // …
+  "scripts": { // …
+    "commitmsg": "./hooks/commit-msg ${GIT_PARAMS}"
+  },
+  // …
+}
+</code></pre></div></article><article class="screen screen--husky-message"></article><article class="flow flow--2 cloud center"><h1> <p class="wrapper">But are hooks enought?</p></h1><div class="subtitle"> <p>— No</p></div></article><article class="illustration illustration-gitlab"></article><article class="screen screen--protect-branch-1"></article><article class="screen screen--protect-branch-2"></article><article class="screen screen--protect-push"></article><article class="screen screen--pushed"></article><article class="flow flow--3 cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;<b>,</b><br><b>whats next?</b></p></h1></article><article class="illustration illustration--punk"></article><article class="voodoo cloud center"><h1> <p class="wrapper">Just want<br>to let you know that we made a voodoo doll <br>of you</p></h1></article><article class="contacts center qrcode"><div class="wrapper"><div class="about-speaker half"><p class="name">Anton Nemtsev</p><p class="link">http://silentimp.info/</p><p class="twitter">@silentimp</p><p class="email">thesilentimp@gmail.com</p><p class="skype">skype: ravencry</p></div><div class="half"><img src="images/git.svg" alt="QRCODE cо ссылкой на доклад"></div><p><a href="https://github.com/SilentImp/codeStyleAndViolence" data-click>https://goo.gl/31KBF6</a></p></div></article></section></body></html>
