@@ -1,0 +1,781 @@
+extends ./partials/layout.jade
+
+block title
+  title Code Style and Vilance
+
+block slides
+
+  article.cover
+    h1.left Code Style 
+      b and
+    h1.right Vilance
+
+  article.illustration.illustration-h1.cloud.center.why
+    h1
+      p.wrapper 
+        b Code Style
+
+  article.illustration.illustration-h1.cloud.center.why
+    h1
+      p.wrapper 
+        b Why 
+        br
+        | in the world 
+        br
+        | we may want it?!
+
+  article.illustration.illustration-b1
+    .subtitle  
+      p — Well, it's fine to write whatever you want while you work alone.
+
+  article.illustration.illustration-h2
+    .subtitle  
+      p — But then your team start to grow …
+  
+  article.illustration.illustration-b2
+
+  article.illustration.illustration-h25
+    .subtitle  
+      p … and more …
+  
+  article.illustration.illustration-b25
+
+  article.illustration.illustration-h3
+    .subtitle  
+      p … and even more …
+  
+  article.illustration.illustration-b3
+
+  article.illustration.illustration-h4
+    .subtitle  
+      p … and more …
+  
+  article.illustration.illustration-b4
+    .subtitle  
+      p … and …
+
+  article.illustration.illustration-b5
+    .subtitle  
+      p … and then you, finally, realise that you need rules.
+
+  article.center.list-1
+    .wrapper
+      h1 What kind of rules
+        br
+        | do we need?
+      ul
+        li Scripts 
+          b (ECMA X, TypeScript, Kotlin, etc. )
+        li Styles 
+          b (CSS, PostCSS, Sass, Less, Stylus, etc.)
+        li Workflow 
+          b (git flow, github flow, gitlab flow, etc.)
+    .subtitle  
+      p — We need to cover scripts, styles and workflow
+
+  article.center.list-2
+    .wrapper
+      h1 Workflow includes
+      ul
+        li Process
+        li Branch naming
+        li Commits naming
+
+  article.choose.cloud.center
+    h1 
+      p.wrapper How to 
+        br 
+        | choose 
+        br
+        | style
+        br
+        | guide?
+
+  article.lazy.cloud.center
+    h1 
+      p.wrapper It should be maintained by someone else
+    .subtitle
+      p — Because we don't want to build a better world, we want to build an app, get our money, then buy a rifle and … but where was I?
+
+
+  article.lazy.lazy--trendy.cloud.center
+    h1 
+      p.wrapper And it 
+        br
+        | should be trendy
+    .subtitle
+      p — Because it increase your team mates value as a developers and thas it would be easier to implement
+
+  article.choose.choose-2.cloud.center
+    h1 
+      p.wrapper Anything
+        br 
+        | else?
+
+  article.lazy.lazy--nope.cloud.center
+    h1 
+      p.wrapper NO
+    .subtitle
+      p — It does not matter if you use spaces or tabs: your text editor can handle any of them. Only thing is matter — code uniformity.
+
+  article.illustration.illustration-airbnb
+
+  article.center.qrcode.var-2
+      .wrapper
+          .half
+              h2 Airbnb JavaScript Style Guide
+          .half
+              img(src="images/airbnb_js.svg", alt="QRCODE with link to Airbnb js style guide")
+          p
+              a(href="https://github.com/airbnb/javascript", data-click=true) https://github.com/airbnb/javascript
+
+  article.center.qrcode.var-2
+      .wrapper
+          .half
+              h2 Airbnb CSS Style Guide
+          .half
+              img(src="images/airbnb_js.svg", alt="QRCODE with link to Airbnb js style guide")
+          p
+              a(href="https://github.com/airbnb/css", data-click=true) https://github.com/airbnb/css
+
+
+  article.illustration.illustration-standard
+
+  article.center.qrcode.var-2
+      .wrapper
+          .half
+              h2 Standard JavaScript Style Guide
+          .half
+              img(src="images/standard_js.svg", alt="QRCODE with link to Airbnb js style guide")
+          p
+              a(href="https://github.com/standard/standard", data-click=true) https://github.com/standard/standard
+
+  article.illustration.illustration-git-flow
+
+  article.center.qrcode.var-2
+      .wrapper
+          .half
+              h2 A successful Git branching model
+          .half
+              img(src="images/git-flow-link.svg", alt="QRCODE with link to original gitflow article")
+          p
+              a(href="http://nvie.com/posts/a-successful-git-branching-model/", data-click=true) https://goo.gl/GDaF  
+
+  article.illustration.illustration-github
+
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 GitHub
+                br
+                | branching model
+          .half
+              img(src="images/github-flow-link.svg", alt="QRCODE with link to original gitflow article")
+          p
+              a(href="https://githubflow.github.io/", data-click=true) https://githubflow.github.io/
+
+  article.illustration.illustration-gitlab
+
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 GitLab
+                br
+                | branching model
+          .half
+              img(src="images/gitlab-flow-link.svg", alt="QRCODE with link to original gitflow article")
+          p
+              a(href="https://about.gitlab.com/2014/09/29/gitlab-flow/", data-click=true) https://goo.gl/Z0w1nQ
+
+  article.choose.choose-3.cloud.center
+    h1 
+      p.wrapper And
+        br
+        | that's
+        br
+        | it?
+
+  article.illustration.illustration--indian
+    .subtitle  
+      p — Your teammates from India are running to implement code style you have selected. The struggle to do it!
+
+  article.illustration.illustration--indian
+    .subtitle
+      p — Actually no, they don't. Nobody want your code style.
+
+  article.artist.cloud.center
+    h1 
+      p.wrapper I am an artist!
+        br
+        | Don't restrict me!
+    .subtitle  
+      p — You need to preset, check, automatize and force code style, 
+      p otherwise there would be none.
+
+  article.illustration.illustration--editorconfig
+
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 EditorConfig
+          .half
+              img(src="images/editorconfig_link.svg", alt="QRCODE with link to eslint")
+          p
+              a(href="http://editorconfig.org/", data-click=true) http://editorconfig.org/
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ vi .editorconfig
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.
+          [*]
+          indent_style = space
+          indent_size = 2
+          tab_width = 2
+          end_of_line = lf
+          charset = utf-8
+          trim_trailing_whitespace = true
+          insert_final_newline = true
+
+  article.illustration.illustration--atom
+
+  article.screen.screen--atom-editorconfig
+
+  article.screen.screen--atom-editorconfig-error
+
+  article.illustration.illustration--ws
+
+  article.screen.screen--ws-editorconfig
+
+  article.center.qrcode.var-6
+    .wrapper
+        .half
+            h2 ESLint
+        .half
+            img(src="images/gitlab-flow-link.svg", alt="QRCODE with link to eslint")
+        p
+            a(href="https://eslint.org/", data-click=true) https://eslint.org/
+
+          
+
+  article.illustration.illustration--eslint
+
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 ESLint
+          .half
+              img(src="images/gitlab-flow-link.svg", alt="QRCODE with link to eslint")
+          p
+              a(href="https://eslint.org/", data-click=true) https://eslint.org/
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ sudo npm i -g eslint
+          $ npm i -D eslint
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ eslint --init
+
+  article.screen.screen--eslint-init
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ vi .eslintrc
+
+  article.center.code-1
+    .wrapper
+      pre
+        code.javascript.
+          // .eslintrc
+          {
+            "extends": "airbnb",
+            "plugins": [
+              "react",
+              "jsx-a11y",
+              "import"
+            ]
+          }
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.javascript.
+          // .eslintrc
+          {
+            "parser": "babel-eslint",
+            "extends": "airbnb",
+            "plugins": [
+              "react",
+              "jsx-a11y",
+              "import"
+            ]
+          }
+
+  article.center.code-3
+    .wrapper
+      pre
+        code.javascript.
+          // .eslintrc
+          {
+            "parser": "babel-eslint",
+            "extends": "airbnb",
+            "plugins": [
+              "react",
+              "jsx-a11y",
+              "import"
+            ],
+            "env": {
+              "browser": true,
+              "es6": true,
+            },
+          }
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          $ npm info 
+              "eslint-config-airbnb@latest" 
+              peerDependencies
+
+          { eslint: '^3.19.0 || ^4.3.0',
+            'eslint-plugin-jsx-a11y': '^5.1.1',
+            'eslint-plugin-import': '^2.7.0',
+            'eslint-plugin-react': '^7.1.0' }
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D eslint@latest
+          $ npm i -D eslint-plugin-react@latest
+          $ npm i -D eslint-plugin-import@latest
+          $ npm i -D eslint-plugin-jsx-a11y@latest
+          $ npm i -D eslint-config-airbnb@latest
+
+  article.center.code-7
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D babel-eslint@latest
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ eslint ./source
+              --color 
+              --format stylish
+
+  article.screen.screen--eslint-errors
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ eslint ./source
+              --color 
+              --format stylish
+              --fix
+
+  article.screen.screen--eslint-better
+
+  article.center.code-1
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { // …
+            "scripts": {
+              "lint:js": "eslint ./source 
+                            --color 
+                            --format stylish 
+                            --fix"
+            }
+          }
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ npm run lint:js
+
+  article.change.cloud.center
+    h1 
+      p.wrapper So,
+        br
+        | should I run it after each change?
+    .subtitle  
+      p — To see problems on the fly you should configure your editor
+
+  article.illustration.illustration--atom
+
+  article.screen.screen--eslint-atom
+
+  article.screen.screen--eslint-atom-fix
+
+  article.screen.screen--eslint-atom-error
+
+  article.illustration.illustration--ws
+
+  article.screen.screen--ws-preferences
+
+  article.screen.screen--ws-eslint
+
+  article.screen.screen--ws-eslint-fix
+
+  article.screen.screen--ws-eslint-error
+
+  article.think.cloud.center
+    h1 
+      p.wrapper Nice,
+        br
+        | but what if I'll ignore linter errors all together?
+    .subtitle  
+      p — Then I should, obviously, use…
+
+  article.illustration.illustration--hook.cloud.center.hook
+    h1 
+      p.wrapper Hook
+
+  article.center.code-7
+    .wrapper
+      pre
+        code.bash.
+          #!/bin/bash
+          # .git/hooks/pre-commit
+          if !(npm run lint:js --silent) then
+            exit 1;
+          fi
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Source Control
+          br
+          | Integrations
+      .half
+        img(src="images/hook.svg", alt="QRCODE with link")
+      p
+        a(href="https://eslint.org/docs/user-guide/integrations#source-control", data-click=true) http://bit.ly/2w5y30Q
+
+  article.think.cloud.center
+    h1 
+      p.wrapper Do you belive that I will create pre-commit by myself?
+
+  article.think.cloud.center
+    h1 
+      p.wrapper You can't store hooks with a repo, you know.
+
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D lint-staged
+          $ npm i -D husky
+
+  article.center.code-1
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { // …
+            "scripts": { // …
+              "precommit": "lint-staged"
+            },
+            "lint-staged": { // …
+              "*.{js,jsx}": "eslint"
+            }
+          }
+
+  article.screen.screen--husky
+
+  article.think.think--swear.cloud.center
+    h1 
+      p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;
+
+
+  article.talk.cloud.center
+    h1 
+      p.wrapper What about styles?
+
+  
+  article.screen.screen--stylelint
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Stylelint
+      .half
+        img(src="images/stylelint_link.svg", alt="QRCODE with link")
+      p
+        a(href="https://stylelint.io/", data-click=true) https://stylelint.io/
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          $ sudo npm i -g stylelint
+          $ npm i -D stylelint
+          $ npm i -D stylelint-config-standard
+          $ vi .stylelintrc
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.js.
+          {
+            "syntax": "less",
+            "extends": "stylelint-config-standard",
+            "rules": {
+              // …
+            }
+          }
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Airbnb Stylelint Config Issue
+      .half
+        img(src="images/stylelint-airbnb-issue.svg", alt="QRCODE with link")
+      p
+        a(href="https://github.com/airbnb/css/pull/23", data-click=true) http://bit.ly/2vwHKlK
+
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          npm i -D stylelint-scss
+          npm i -D stylelint-selector-bem-pattern
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Airbnb Stylelint Config #1
+      .half
+        img(src="images/stylelint-airbnb-1.svg", alt="QRCODE with link")
+      p
+        a(href="https://gist.github.com/DanielaValero/b3a72b2f3d0c85c1985d5d2d7497f347", data-click=true) http://bit.ly/2vwQmsD
+
+
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Airbnb Stylelint Config #2
+      .half
+        img(src="images/stylelint-airbnb-2.svg", alt="QRCODE with link")
+      p
+        a(href="https://gist.github.com/SilentImp/64d8daa0d890e6ba4aa00d5dc2c273d8", data-click=true) http://bit.ly/2wGfVMU
+
+  article.center.code-6
+    .wrapper
+      pre
+        code.bash.
+          stylelint ./src/**/*.less 
+                      --syntax less 
+                      --color 
+                      --formatter verbose
+
+  article.screen.screen--stylelint-error
+
+  article.center.code-6
+    .wrapper
+      pre
+        code.bash.
+          stylelint ./src/**/*.less 
+                      --syntax less 
+                      --color 
+                      --formatter verbose
+                      --fix
+
+  article.screen.screen--stylelint-fix
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { // …
+            "scripts": {
+              "lint:less": "stylelint ./src/**/*.less 
+                                      --syntax less 
+                                      --color 
+                                      --formatter verbose
+                                      --fix"
+            }
+          }
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ npm run lint:less
+
+  article.illustration.illustration--atom
+
+  article.screen.screen--sytlelint-atom
+
+  article.illustration.illustration--ws
+
+  article.screen.screen--ws-preferences
+
+  article.screen.screen--ws-errors
+
+  article.talk.talk--2.cloud.center
+    h1 
+      p.wrapper But you will not use hooks, right?
+    .subtitle  
+      p — I definitely will
+
+  article.center.code-1
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { // …
+            "scripts": { // …
+              "precommit": "lint-staged"
+            },
+            "lint-staged": { // …
+              "*.less": "stylelint"
+            }
+          }
+
+  article.screen.screen--husky-less
+
+  article.talk.talk--3.cloud.center
+    h1 
+      p.wrapper &#x2589;&#x2589;&#x2589; &#x2589;&#x2589; &#x2589;
+        br
+        | &#x2589;&#x2589;&#x2589;&#x2589;&#x2589;
+
+    h2
+      p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;
+
+  article.flow.cloud.center
+    h1 
+      p.wrapper What about flow?
+    .subtitle  
+      p — More hooks…
+
+  article.flow-demo
+    .wrapper
+
+  article.center.code-7
+    .wrapper
+      pre
+        code.bash.
+          vi ./hooks/commit-msg
+          chmod 0755 ./hooks/commit-msg
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.bash.
+          #!/bin/bash
+          MESSAGE=`cat "$1"`;
+          if (![[ "$MESSAGE" =~ ^[A-Z]+-[0-9]+\ -\ .*$ ]]) 
+            && [ "$MESSAGE" != "merge" ]; 
+            then 
+              echo "Wrong commit message format."; 
+              exit 1;
+          fi
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.bash.
+          if [[ "$MESSAGE" =~ ([а-яА-Я]+) ]]; then 
+            echo "Don't use russian for commit message."; 
+            exit 2;
+          fi
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.bash.
+          if (![[ "$MESSAGE" =~ ^[A-Z]+-[0-9]+\ -\ .{5,}$ ]]) 
+            && [ "$MESSAGE" != "merge" ]; then 
+              echo "Commit message is too short, 
+                    try to be more descriptive."; 
+              exit 3;
+          fi
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { // …
+            "scripts": { // …
+              "commitmsg": "./hooks/commit-msg ${GIT_PARAMS}"
+            },
+            // …
+          }
+
+  article.screen.screen--husky-message
+
+  article.flow.flow--2.cloud.center
+    h1 
+      p.wrapper But are hooks enought?
+    .subtitle  
+      p — No
+
+  article.screen.screen--husky-message
+
+  article.illustration.illustration-gitlab
+
+  article.screen.screen--protect-branch-1
+
+  article.screen.screen--protect-branch-2
+
+  article.screen.screen--protect-push
+
+  article.screen.screen--pushed
+
+  article.flow.flow--3.cloud.center
+    h1 
+      p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;
+        b ,
+        br
+        b whats next?
+
+  article.illustration.illustration--punk
+
+  article.voodoo.cloud.center
+    h1 
+      p.wrapper Just want
+        br
+        | to let you know that we made a voodoo doll 
+        br
+        | of you
+
+  article.contacts.center.qrcode
+    .wrapper
+      .about-speaker.half
+        p.name Anton Nemtsev
+        p.link http://silentimp.info/
+        p.twitter @silentimp
+        p.email thesilentimp@gmail.com
+        p.skype skype: ravencry
+      .half
+        img(src="images/git.svg", alt="QRCODE cо ссылкой на доклад")
+
+      p
+        a(href="https://github.com/SilentImp/codeStyleAndViolence", data-click=true) https://goo.gl/31KBF6
