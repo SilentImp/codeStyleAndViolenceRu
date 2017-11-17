@@ -1050,8 +1050,14 @@ article.screen--ws-editorconfig {
 article.screen--atom-editorconfig {
   background-image: url("../images/atom-editorconfig.png");
 }
+article.screen--prettier {
+  background-image: url("../images/prettier-logo-light.svg");
+}
 article.screen--atom-editorconfig-error {
   background-image: url("../images/atom-editorconfig-error.png");
+}
+article.screen--atom-editorconfig-fix {
+  background-image: url("../images/editorconfig.png");
 }
 article.screen--protect-branch-1 {
   background-image: url("../images/protect-branch-1.png");
@@ -1338,6 +1344,10 @@ article.cloud.think h1:after {
 article.cloud.think--repo h1 .wrapper {
   font-size: 56px;
   line-height: 64px;
+}
+article.cloud.think--left h1 .wrapper {
+  font-size: 42px;
+  line-height: 48px;
 }
 article.cloud.think--swear h1 {
   width: 400px;

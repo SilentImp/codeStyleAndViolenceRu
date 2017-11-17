@@ -7,7 +7,7 @@ end_of_line = lf
 charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
-</code></pre></div></article><article class="illustration illustration--atom"></article><article class="screen screen--atom-editorconfig"></article><article class="screen screen--atom-editorconfig-error"></article><article class="illustration illustration--ws"></article><article class="screen screen--ws-editorconfig"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>EditorConfig</h2></div><div class="half"><img src="images/editorconfig_link.svg" alt="QRCODE with link to eslint"></div><p><a href="http://editorconfig.org/" data-click>http://editorconfig.org/</a></p></div></article><article class="illustration illustration--eslint"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>ESLint</h2></div><div class="half"><img src="images/gitlab-flow-link.svg" alt="QRCODE with link to eslint"></div><p><a href="https://eslint.org/" data-click>https://eslint.org/</a></p></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ sudo npm i -g eslint
+</code></pre></div></article><article class="illustration illustration--atom"></article><article class="screen screen--atom-editorconfig"></article><article class="screen screen--atom-editorconfig-error"></article><article class="screen screen--atom-editorconfig-fix"></article><article class="illustration illustration--ws"></article><article class="screen screen--ws-editorconfig"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>EditorConfig</h2></div><div class="half"><img src="images/editorconfig_link.svg" alt="QRCODE with link to eslint"></div><p><a href="http://editorconfig.org/" data-click>http://editorconfig.org/</a></p></div></article><article class="illustration illustration--eslint"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>ESLint</h2></div><div class="half"><img src="images/gitlab-flow-link.svg" alt="QRCODE with link to eslint"></div><p><a href="https://eslint.org/" data-click>https://eslint.org/</a></p></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ sudo npm i -g eslint
 $ npm i -D eslint
 </code></pre></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ eslint --init
 </code></pre></div></article><article class="screen screen--eslint-init"></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ vi .eslintrc
@@ -90,7 +90,49 @@ $ npm i -D husky
     "*.{js,jsx}": "eslint"
   }
 }
-</code></pre></div></article><article class="screen screen--husky"></article><article class="think think--swear cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;</p></h1></article><article class="talk cloud center"><h1> <p class="wrapper">А что там со стилями?</p></h1></article><article class="screen screen--stylelint"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Stylelint</h2></div><div class="half"><img src="images/stylelint_link.svg" alt="QRCODE with link"></div><p><a href="https://stylelint.io/" data-click>https://stylelint.io/</a></p></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">$ sudo npm i -g stylelint
+</code></pre></div></article><article class="screen screen--husky"></article><article class="think think--left cloud center"><h1> <p class="wrapper">Много ли останется так от моего уникального кода?</p></h1></article><article class="screen screen--prettier"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Prettier</h2></div><div class="half"><img src="images/prettier-link.svg" alt="QRCODE with link to eslint"></div><p><a href="https://prettier.io/" data-click>https://prettier.io/</a></p></div></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">$ npm i -D -E prettier
+</code></pre></div></article><article class="center code-3"><div class="wrapper"><pre><code class="javascript">// .prettierrc
+{
+  "parser": "babylon",
+  "useTabs": false,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 100,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "proseWrap": false,
+}
+
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="js">// package.json
+{ 
+  "scripts": { 
+    "format": "prettier 
+                  --config .prettierrc
+                  --write 'src/**/*.{js,jsx}'"
+  }, 
+}
+</code></pre></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">$ npm i -D eslint-plugin-prettier
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">// .eslintrc
+{
+  "plugins": [
+    "prettier",
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  },
+}
+</code></pre></div></article><article class="center code-6"><div class="wrapper"><pre><code class="bash">$ npm i -D eslint-config-prettier
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">// .eslintrc
+{
+  "extends": [
+    "airbnb", 
+    "prettier", 
+    "prettier/react"
+  ],
+}
+</code></pre></div></article><article class="think think--swear cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;</p></h1></article><article class="talk cloud center"><h1> <p class="wrapper">А что там со стилями?</p></h1></article><article class="screen screen--stylelint"></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Stylelint</h2></div><div class="half"><img src="images/stylelint_link.svg" alt="QRCODE with link"></div><p><a href="https://stylelint.io/" data-click>https://stylelint.io/</a></p></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">$ sudo npm i -g stylelint
 $ npm i -D stylelint
 $ npm i -D stylelint-config-standard
 $ vi .stylelintrc
