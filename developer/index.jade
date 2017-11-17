@@ -239,6 +239,8 @@ block slides
   article.screen.screen--atom-editorconfig
 
   article.screen.screen--atom-editorconfig-error
+    
+  article.screen.screen--atom-editorconfig-fix
 
   article.illustration.illustration--ws
 
@@ -502,10 +504,101 @@ block slides
 
   article.screen.screen--husky
 
+  article.think.think--left.cloud.center
+    h1 
+      p.wrapper Много ли останется так от моего уникального кода?
+  
+  article.screen.screen--prettier
+    
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 Prettier
+          .half
+              img(src="images/prettier-link.svg", alt="QRCODE with link to eslint")
+          p
+              a(href="https://prettier.io/", data-click=true) https://prettier.io/
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D -E prettier
+          
+  article.center.code-3
+    .wrapper
+      pre
+        code.javascript.
+          // .prettierrc
+          {
+            "parser": "babylon",
+            "useTabs": false,
+            "tabWidth": 2,
+            "singleQuote": true,
+            "semi": true,
+            "printWidth": 100,
+            "trailingComma": "all",
+            "bracketSpacing": true,
+            "jsxBracketSameLine": true,
+            "proseWrap": false,
+          }
+
+          
+  article.center.code-1
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { 
+            "scripts": { 
+              "format": "prettier 
+                            --config .prettierrc
+                            --write 'src/**/*.{js,jsx}'"
+            }, 
+          }
+  
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D eslint-plugin-prettier
+  
+  article.center.code-1
+    .wrapper
+      pre
+        code.javascript.
+          // .eslintrc
+          {
+            "plugins": [
+              "prettier",
+            ],
+            "rules": {
+              "prettier/prettier": "error"
+            },
+          }
+  
+  article.center.code-6
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D eslint-config-prettier
+  
+  article.center.code-1
+    .wrapper
+      pre
+        code.javascript.
+          // .eslintrc
+          {
+            "extends": [
+              "airbnb", 
+              "prettier", 
+              "prettier/react"
+            ],
+          }
+  
   article.think.think--swear.cloud.center
     h1 
       p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;
-
 
   article.talk.cloud.center
     h1 
