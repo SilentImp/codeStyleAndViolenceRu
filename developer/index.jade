@@ -1,122 +1,126 @@
 extends ./partials/layout.jade
 
 block title
-  title Code Style and Vilance
+  title Кодстайл и насилие
 
 block slides
 
   article.cover
-    h1.left Code Style 
-      b and
-    h1.right Vilance
+    .container
+      h1.left Кодстайл
+      h1.right Насилие
+      h1.right Хипстеры
 
   article.illustration.illustration-h1.cloud.center.why
     h1
       p.wrapper 
-        b Code Style
+        b Кодстайл?
 
   article.illustration.illustration-h1.cloud.center.why
     h1
       p.wrapper 
-        b Why 
+        b Зачем мне
         br
-        | in the world 
-        br
-        | we may want it?!
+        b это надо?
 
   article.illustration.illustration-b1
     .subtitle  
-      p — Well, it's fine to write whatever you want while you work alone.
+      p — Не то что бы именно надо. 
+        br
+        |  Пока ты работаешь один.
 
   article.illustration.illustration-h2
     .subtitle  
-      p — But then your team start to grow …
+      p — Но как только команда начинает рости …
   
   article.illustration.illustration-b2
 
   article.illustration.illustration-h25
     .subtitle  
-      p … and more …
+      p … всё больше …
   
   article.illustration.illustration-b25
 
   article.illustration.illustration-h3
     .subtitle  
-      p … and even more …
+      p … и больше …
   
   article.illustration.illustration-b3
 
   article.illustration.illustration-h4
     .subtitle  
-      p … and more …
+      p … и страннее …
   
   article.illustration.illustration-b4
     .subtitle  
-      p … and …
+      p … и …
 
   article.illustration.illustration-b5
     .subtitle  
-      p … and then you, finally, realise that you need rules.
+      p … и в определенный момент станновится очевидно, 
+        br
+        |  что нужны правила.
 
   article.center.list-1
     .wrapper
-      h1 What kind of rules
-        br
-        | do we need?
+      h1 Что за правила нужны?
       ul
-        li Scripts 
+        li Скрипты 
           b (ECMA X, TypeScript, Kotlin, etc. )
-        li Styles 
+        li Стили 
           b (CSS, PostCSS, Sass, Less, Stylus, etc.)
-        li Workflow 
+        li Рабочий процесс 
           b (git flow, github flow, gitlab flow, etc.)
-    .subtitle  
-      p — We need to cover scripts, styles and workflow
+    //- .subtitle  
+    //-   p — Они должны покрывать скрипты, стили и рабочий процесс.
 
   article.center.list-2
     .wrapper
-      h1 Workflow includes
+      h1 Рабочий процесс включает
       ul
-        li Process
-        li Branch naming
-        li Commits naming
+        li Процесс
+        li Именование веток
+        li Именование коммитов
 
   article.choose.cloud.center
     h1 
-      p.wrapper How to 
+      p.wrapper А как 
         br 
-        | choose 
+        | выбрать 
         br
-        | style
-        br
-        | guide?
+        | кодстайл?
 
   article.lazy.cloud.center
     h1 
-      p.wrapper It should be maintained by someone else
+      p.wrapper Его
+        br
+        | должен поддерживать кто то, кто
+        br
+        | не я
     .subtitle
-      p — Because we don't want to build a better world, we want to build an app, get our money, then buy a rifle and … but where was I?
-
+      p — Потому что мы тут с вами не лучший мир строим, мы пишем   программы, что бы заработать деньги, 
+        br
+        |  купить ружье … и … о чем это я?
 
   article.lazy.lazy--trendy.cloud.center
     h1 
-      p.wrapper And it 
+      p.wrapper Он 
         br
-        | should be trendy
+        | должен быть модным
     .subtitle
-      p — Because it increase your team mates value as a developers and thas it would be easier to implement
+      p — Потому что это увеличивает ценность членов вашей команды как   разработчиков и потому его будет проще внедрить
 
   article.choose.choose-2.cloud.center
     h1 
-      p.wrapper Anything
+      p.wrapper Что то
         br 
-        | else?
+        | ещё?
 
   article.lazy.lazy--nope.cloud.center
     h1 
-      p.wrapper NO
+      p.wrapper НЕТ
     .subtitle
-      p — It does not matter if you use spaces or tabs: your text editor can handle any of them. Only thing is matter — code uniformity.
+      p — Всем начхать используете вы пробелы или табы: IDE отлично   справится и с теми, и с другими. Важно единообразие.
 
   article.illustration.illustration-airbnb
 
@@ -189,28 +193,25 @@ block slides
 
   article.choose.choose-3.cloud.center
     h1 
-      p.wrapper And
-        br
-        | that's
-        br
-        | it?
+      p.wrapper И всё?
+        b погнали?
 
   article.illustration.illustration--indian
     .subtitle  
-      p — Your teammates from India are running to implement code style you have selected. The struggle to do it!
+      p — Да! Это ваши коллеги из отделения в Дели бегут, что бы внедрить   ваш кодстайл. Вот прямо таки вприпрыжку и волосы назад!
 
   article.illustration.illustration--indian
     .subtitle
-      p — Actually no, they don't. Nobody want your code style.
+      p — На самом деле нет. Никому ваш кодстайл не нужен.
 
   article.artist.cloud.center
     h1 
-      p.wrapper I am an artist!
+      p.wrapper Я — художник!
         br
-        | Don't restrict me!
+        | Не смейте меня ограничивать!
     .subtitle  
-      p — You need to preset, check, automatize and force code style, 
-      p otherwise there would be none.
+      p — Если хотите внедрить кодстайл, то его нужно явно   определить,
+        |  автоматически проверять и принуждать использовать. 
 
   article.illustration.illustration--editorconfig
 
@@ -403,11 +404,13 @@ block slides
 
   article.change.cloud.center
     h1 
-      p.wrapper So,
+      p.wrapper И что,
         br
-        | should I run it after each change?
+        | мне это ручками каждый раз запускать?
     .subtitle  
-      p — To see problems on the fly you should configure your editor
+      p — Что бы видеть проблемы в процессе работы 
+        br
+        |  нужно настроить редактор
 
   article.illustration.illustration--atom
 
@@ -429,15 +432,17 @@ block slides
 
   article.think.cloud.center
     h1 
-      p.wrapper Nice,
+      p.wrapper Зашибись,
         br
-        | but what if I'll ignore linter errors all together?
+        | но что если
+        br 
+        | я это всё просто проигнорирую?
     .subtitle  
-      p — Then I should, obviously, use…
+      p — Тогда, очевидно, мне придется использовать…
 
   article.illustration.illustration--hook.cloud.center.hook
     h1 
-      p.wrapper Hook
+      p.wrapper Хук
 
   article.center.code-7
     .wrapper
@@ -462,11 +467,16 @@ block slides
 
   article.think.cloud.center
     h1 
-      p.wrapper Do you belive that I will create pre-commit by myself?
+      p.wrapper Ты правда думаешь, что я себе pre-commit установлю?
 
   article.think.cloud.center
     h1 
-      p.wrapper You can't store hooks with a repo, you know.
+      p.wrapper Я себе что враг? И вообще — сложно же.
+
+
+  article.think.think--repo.cloud.center
+    h1 
+      p.wrapper В репу хуки не добавить.
 
 
   article.center.code-9
@@ -499,7 +509,7 @@ block slides
 
   article.talk.cloud.center
     h1 
-      p.wrapper What about styles?
+      p.wrapper А что там со стилями?
 
   
   article.screen.screen--stylelint
@@ -627,9 +637,9 @@ block slides
 
   article.talk.talk--2.cloud.center
     h1 
-      p.wrapper But you will not use hooks, right?
+      p.wrapper И никаких хуков, да?
     .subtitle  
-      p — I definitely will
+      p — Нет.
 
   article.center.code-1
     .wrapper
@@ -658,9 +668,11 @@ block slides
 
   article.flow.cloud.center
     h1 
-      p.wrapper What about flow?
+      p.wrapper А что 
+        br
+        | насчет рабочего процесса?
     .subtitle  
-      p — More hooks…
+      p — Ещё больше хуков…
 
   article.flow-demo
     .wrapper
@@ -721,9 +733,9 @@ block slides
 
   article.flow.flow--2.cloud.center
     h1 
-      p.wrapper But are hooks enought?
+      p.wrapper И всё?
     .subtitle  
-      p — No
+      p — Нет
 
   article.illustration.illustration-gitlab
 
@@ -737,20 +749,20 @@ block slides
 
   article.flow.flow--3.cloud.center
     h1 
-      p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;
+      p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;&#x2589;
         b ,
         br
-        b whats next?
+        b что дальше?
 
   article.illustration.illustration--punk
 
   article.voodoo.cloud.center
     h1 
-      p.wrapper Just want
+      p.wrapper Просто хотел дать тебе знать,
         br
-        | to let you know that we made a voodoo doll 
+        | что мы сделали куклу вуду,
         br
-        | of you
+        b &#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;
 
   article.contacts.center.qrcode
     .wrapper

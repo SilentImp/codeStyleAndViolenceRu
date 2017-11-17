@@ -86,7 +86,7 @@ gulp.task('deploy', function () {
   return gulp.src('build/**')
           .pipe(deploy({
             cacheDir:   'gh-cache',
-            remoteUrl:  'git@github.com:SilentImp/codeStyleAndViolence.git'
+            remoteUrl:  'git@github.com:SilentImp/codeStyleAndViolenceRu.git'
           }).on('error', function(){
             console.log('error', arguments);
           }));
