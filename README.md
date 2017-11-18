@@ -1,7 +1,7 @@
-# Code Style and Violence
+# Кодстайл и насилие
 
-# Conference
+# Конференции
 
-+ [LvivJs][1] August of 26, 2017. Lviv.
++ [FrontFest][1] 18 ноября, 2017. Москва.
 
-[1]: lvivjs.org.ua
+[1]: https://2017.frontfest.ru/en/
