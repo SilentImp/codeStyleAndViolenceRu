@@ -1008,6 +1008,17 @@ article.screen--stylelint {
 article.screen--husky-message {
   background-image: url("../images/husky-message.png");
 }
+article.screen--bash {
+  background-image: url("../images/bash.png");
+}
+article.screen--windows {
+  background-image: url("../images/windows.jpg");
+  background-size: cover;
+}
+article.screen--bc {
+  background-image: url("../images/bi4.jpg");
+  background-size: cover;
+}
 article.screen--husky {
   background-image: url("../images/husky.png");
 }

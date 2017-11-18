@@ -143,9 +143,7 @@ $ vi .stylelintrc
     // …
   }
 }
-</code></pre></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config Issue</h2></div><div class="half"><img src="images/stylelint-airbnb-issue.svg" alt="QRCODE with link"></div><p><a href="https://github.com/airbnb/css/pull/23" data-click>http://bit.ly/2vwHKlK</a></p></div></article><article class="center code-0"><div class="wrapper"><pre><code class="bash">npm i -D stylelint-scss
-npm i -D stylelint-selector-bem-pattern
-</code></pre></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config #1</h2></div><div class="half"><img src="images/stylelint-airbnb-1.svg" alt="QRCODE with link"></div><p><a href="https://gist.github.com/DanielaValero/b3a72b2f3d0c85c1985d5d2d7497f347" data-click>http://bit.ly/2vwQmsD</a></p></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config #2</h2></div><div class="half"><img src="images/stylelint-airbnb-2.svg" alt="QRCODE with link"></div><p><a href="https://gist.github.com/SilentImp/64d8daa0d890e6ba4aa00d5dc2c273d8" data-click>http://bit.ly/2wGfVMU</a></p></div></article><article class="center code-6"><div class="wrapper"><pre><code class="bash">stylelint ./src/**/*.less 
+</code></pre></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config PR</h2></div><div class="half"><img src="images/stylelint-airbnb-issue.svg" alt="QRCODE with link"></div><p><a href="https://github.com/airbnb/css/pull/56/files#diff-c8daf3b8e5463995761e914cf32b47a5" data-click>http://bit.ly/2zTHQHN</a></p></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config #1</h2></div><div class="half"><img src="images/stylelint-airbnb-1.svg" alt="QRCODE with link"></div><p><a href="https://gist.github.com/DanielaValero/b3a72b2f3d0c85c1985d5d2d7497f347" data-click>http://bit.ly/2vwQmsD</a></p></div></article><article class="center qrcode var-6"><div class="wrapper"><div class="half"><h2>Airbnb Stylelint Config #2</h2></div><div class="half"><img src="images/stylelint-airbnb-2.svg" alt="QRCODE with link"></div><p><a href="https://gist.github.com/SilentImp/64d8daa0d890e6ba4aa00d5dc2c273d8" data-click>http://bit.ly/2wGfVMU</a></p></div></article><article class="center code-6"><div class="wrapper"><pre><code class="bash">stylelint ./src/**/*.less 
             --syntax less 
             --color 
             --formatter verbose
@@ -201,4 +199,50 @@ fi
   },
   // …
 }
-</code></pre></div></article><article class="screen screen--husky-message"></article><article class="flow flow--2 cloud center"><h1> <p class="wrapper">И всё?</p></h1><div class="subtitle"> <p>— Нет</p></div></article><article class="illustration illustration-gitlab"></article><article class="screen screen--protect-branch-1"></article><article class="screen screen--protect-branch-2"></article><article class="screen screen--protect-push"></article><article class="screen screen--pushed"></article><article class="flow flow--3 cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;<b>,</b><br><b>что дальше?</b></p></h1></article><article class="illustration illustration--punk"></article><article class="voodoo cloud center"><h1> <p class="wrapper">Просто хотел дать тебе знать,<br>что мы сделали куклу вуду,<br><b>&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;</b></p></h1></article><article class="contacts center qrcode"><div class="wrapper"><div class="about-speaker half"><p class="name">Anton Nemtsev</p><p class="link">http://silentimp.info/</p><p class="twitter">@silentimp</p><p class="email">thesilentimp@gmail.com</p><p class="skype">skype: ravencry</p></div><div class="half"><img src="images/git.svg" alt="QRCODE cо ссылкой на доклад"></div><p><a href="https://github.com/SilentImp/codeStyleAndViolence" data-click>https://goo.gl/31KBF6</a></p></div></article></section></body></html>
+</code></pre></div></article><article class="screen screen--husky-message"></article><article class="screen screen--bash"></article><article class="screen screen--windows"></article><article class="screen screen--bc"></article><article class="center code-9"><div class="wrapper"><pre><code class="bash">npm init
+</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="bash">npm i -S command-line-args
+</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="javascript">// index.js
+#! /usr/bin/env node
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">// index.js
+#! /usr/bin/env node
+const fs = require('fs');
+const filePath = process.argv[2];
+if (!fs.existsSync(filePath)) {
+  console.log('Can not read commit message');
+  process.exit(1);
+}
+const message = fs.readFileSync(filePath);
+</code></pre></div></article><article class="center code-2"><div class="wrapper"><pre><code class="javascript">const commandLineArgs = require('command-line-args');
+const optionDefinitions = [{ 
+  name: 'regexp', 
+  alias: 'r', 
+  type: String, 
+  defaultValue: '^[A-Z]+-[0-9]+\s-\s[\W\w\s]{5,}[\s]*$' },
+];
+const cli = commandLineArgs(optionDefinitions);
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="javascript">const commonRegexp = new RegExp(
+  cli.regexp, 
+  'ig'
+);
+if (!commonRegexp.test(message)) {
+  console.log("Wrong commit message format");
+  process.exit(3);
+}
+process.exit(0);
+</code></pre></div></article><article class="center code-1"><div class="wrapper"><pre><code class="json">// package.json
+"name": "my-message-hook",
+"main": "index.js",
+"bin": {"commit-msg": "index.js"},
+"scripts": {
+  "release": "npm version patch && 
+              git push --tags && 
+              npm publish --access public"
+}
+</code></pre></div></article><article class="center code-8"><div class="wrapper"><pre><code class="bash">npm i -S my-message-hook
+</code></pre></div></article><article class="center code-6"><div class="wrapper"><pre><code class="json">// package.json
+"scripts": {
+  "commitmsg": "commit-msg  
+                  ${GIT_PARAMS} 
+                  -r MyRegExp"
+},
+</code></pre></div></article><article class="flow flow--2 cloud center"><h1> <p class="wrapper">И всё?</p></h1><div class="subtitle"> <p>— Нет</p></div></article><article class="illustration illustration-gitlab"></article><article class="screen screen--protect-branch-1"></article><article class="screen screen--protect-branch-2"></article><article class="screen screen--protect-push"></article><article class="screen screen--pushed"></article><article class="flow flow--3 cloud center"><h1> <p class="wrapper">&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;<b>,</b><br><b>что дальше?</b></p></h1></article><article class="illustration illustration--punk"></article><article class="voodoo cloud center"><h1> <p class="wrapper">Просто хотел дать тебе знать,<br>что мы сделали куклу вуду,<br><b>&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;&#x2589;</b></p></h1></article><article class="contacts center qrcode"><div class="wrapper"><div class="about-speaker half"><p class="name">Anton Nemtsev</p><p class="link">http://silentimp.info/</p><p class="twitter">@silentimp</p><p class="email">thesilentimp@gmail.com</p><p class="skype">skype: ravencry</p></div><div class="half"><img src="images/git.svg" alt="QRCODE cо ссылкой на доклад"></div><p><a href="https://github.com/SilentImp/codeStyleAndViolence" data-click>https://goo.gl/31KBF6</a></p></div></article></section></body></html>
