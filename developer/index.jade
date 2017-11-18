@@ -640,19 +640,12 @@ block slides
   article.center.qrcode.var-6
     .wrapper
       .half
-        h2 Airbnb Stylelint Config Issue
+        h2 Airbnb Stylelint Config PR
       .half
         img(src="images/stylelint-airbnb-issue.svg", alt="QRCODE with link")
       p
-        a(href="https://github.com/airbnb/css/pull/23", data-click=true) http://bit.ly/2vwHKlK
+        a(href="https://github.com/airbnb/css/pull/56/files#diff-c8daf3b8e5463995761e914cf32b47a5", data-click=true) http://bit.ly/2zTHQHN
 
-
-  article.center.code-0
-    .wrapper
-      pre
-        code.bash.
-          npm i -D stylelint-scss
-          npm i -D stylelint-selector-bem-pattern
 
   article.center.qrcode.var-6
     .wrapper
@@ -823,7 +816,104 @@ block slides
           }
 
   article.screen.screen--husky-message
+    
+  article.screen.screen--bash
+    
+  article.screen.screen--windows
+    
+  article.screen.screen--bc
+    
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm init
+          
+  article.center.code-8
+    .wrapper
+      pre
+        code.bash.
+          npm i -S command-line-args
+  
+  article.center.code-8
+    .wrapper
+      pre
+        code.javascript.
+          // index.js
+          #! /usr/bin/env node
+          
+  article.center.code-1
+    .wrapper
+      pre
+        code.javascript.
+          // index.js
+          #! /usr/bin/env node
+          const fs = require('fs');
+          const filePath = process.argv[2];
+          if (!fs.existsSync(filePath)) {
+            console.log('Can not read commit message');
+            process.exit(1);
+          }
+          const message = fs.readFileSync(filePath);
 
+  article.center.code-2
+    .wrapper
+      pre
+        code.javascript.
+          const commandLineArgs = require('command-line-args');
+          const optionDefinitions = [{ 
+            name: 'regexp', 
+            alias: 'r', 
+            type: String, 
+            defaultValue: '^[A-Z]+-[0-9]+\s-\s[\W\w\s]{5,}[\s]*$' },
+          ];
+          const cli = commandLineArgs(optionDefinitions);
+
+  article.center.code-1
+    .wrapper
+      pre
+        code.javascript.
+          const commonRegexp = new RegExp(
+            cli.regexp, 
+            'ig'
+          );
+          if (!commonRegexp.test(message)) {
+            console.log("Wrong commit message format");
+            process.exit(3);
+          }
+          process.exit(0);
+  
+  article.center.code-1
+    .wrapper
+      pre
+        code.json.
+          // package.json
+          "name": "my-message-hook",
+          "main": "index.js",
+          "bin": {"commit-msg": "index.js"},
+          "scripts": {
+            "release": "npm version patch && 
+                        git push --tags && 
+                        npm publish --access public"
+          }
+  
+  article.center.code-8
+    .wrapper
+      pre
+        code.bash.
+          npm i -S my-message-hook
+  
+  article.center.code-6
+    .wrapper
+      pre
+        code.json.
+          // package.json
+          "scripts": {
+            "commitmsg": "commit-msg  
+                            ${GIT_PARAMS} 
+                            -r MyRegExp"
+          },
+  
   article.flow.flow--2.cloud.center
     h1 
       p.wrapper И всё?
