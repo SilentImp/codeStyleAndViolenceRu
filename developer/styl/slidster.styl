@@ -2,7 +2,7 @@ slide-width = 1200px
 slide-height = 675px
 slide-margin = 20px
 
-slide-bgc = #fff
+slide-bgc = #f4f4f4
 
 dark-color = #fff
 light-color = #000
@@ -168,6 +168,7 @@ html body .font-xxlarge>* *
 
 .qrcode
   img
+    mix-blend-mode multiply
     max-width 90%
     width 90%
     max-height 70%
@@ -369,7 +370,13 @@ article
   width slide-width
   height slide-height
   margin slide-margin auto
+  
   background-color slide-bgc
+  background-image url(../images/slide.png)
+  background-position 50% 50%
+  background-repeat no-repeat
+  background-size cover
+  
   position relative
   color light-color
   counter-increment slide
