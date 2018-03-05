@@ -285,7 +285,7 @@ img {
 
 .hljs {
   display: block;
-  background: white;
+  background: transparent;
   color: #4d4d4c;
   padding: 0.5em;
 }
@@ -454,6 +454,7 @@ html body .font-xxlarge>* * {
   background-position: 50% 50%;
 }
 .qrcode img {
+  mix-blend-mode: multiply;
   max-width: 90%;
   width: 90%;
   max-height: 70%;
@@ -688,7 +689,11 @@ article {
   width: 1200px;
   height: 675px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #f4f4f4;
+  background-image: url("../images/slide.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   color: #000;
   counter-increment: slide;
@@ -852,8 +857,8 @@ html body section#slides article iframe.half:last-child {
 
 article.contacts {
   background-color: #fff;
-  -webkit-box-shadow: inset 0 0 0 45px #ff4da9;
-          box-shadow: inset 0 0 0 45px #ff4da9;
+  -webkit-box-shadow: inset 0 0 0 45px #009bd2;
+          box-shadow: inset 0 0 0 45px #009bd2;
 }
 article.contacts .half,
 article.contacts .wrapper {
@@ -885,8 +890,8 @@ article.contacts:before {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("../images/logo.jpg");
-  background-size: auto 150%;
+  background-image: url("../images/dog.png");
+  background-size: auto;
   background-position: -250px 330px;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -895,9 +900,9 @@ article.contacts:before {
   pointer-events: none;
 }
 article.cover {
-  background-color: #fff;
-  -webkit-box-shadow: inset 0 0 0 45px #ff4da9;
-          box-shadow: inset 0 0 0 45px #ff4da9;
+  background-color: #f4f4f4;
+  -webkit-box-shadow: inset 0 0 0 45px #009fd5;
+          box-shadow: inset 0 0 0 45px #009fd5;
 }
 article.cover:before {
   content: "";
@@ -907,9 +912,28 @@ article.cover:before {
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("../images/logo.jpg");
-  background-size: auto 100%;
-  background-position: 100% 100%;
+  background-image: url("../images/logo-big.png");
+  background-size: 700px auto;
+  background-position: 50% -160px;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+article.cover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  background-image: url("../images/logo-big.png"), url("../images/bg.png");
+  background-size: 700px auto, cover;
+  background-position: 50% 500px, 50% 50%;
+  border-radius: 0;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   -webkit-mix-blend-mode: multiply;
@@ -917,15 +941,16 @@ article.cover:before {
 }
 article.cover .container {
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 280px;
+  left: 0;
+  right: 0;
 }
 article.cover h1 {
   font-size: 96px;
-  font-family: 'Cormorant Infant', serif;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
-  color: #021966;
+  color: #ed3f23;
+  text-align: center;
 }
 article.cover h1 b {
   font-size: 50px;
@@ -1082,6 +1107,9 @@ article.screen--protect-push {
 article.screen--pushed {
   background-image: url("../images/pushed.png");
 }
+article.illustration--end {
+  background-image: url("../images/end.png");
+}
 article.illustration--punk {
   background-image: url("../images/punk.jpg");
 }
@@ -1169,7 +1197,7 @@ article.list-1 h1 {
 article.list-1 ul {
   font-size: 48px;
   line-height: 56px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.list-1 b {
   color: #333;
@@ -1368,7 +1396,7 @@ article.cloud.think--swear h1 {
 article.cloud.think--swear h1 .wrapper {
   font-size: 64px;
   line-height: 72px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.cloud.talk {
   background-image: url("../images/talk.jpg");
@@ -1387,7 +1415,7 @@ article.cloud.talk h2 {
 article.cloud.talk h2 .wrapper {
   font-size: 38px;
   line-height: 48px;
-  color: #c00;
+  color: #ed3f23;
 }
 article.cloud.talk h2:after {
   -webkit-transform: rotate(105deg);
@@ -1423,7 +1451,7 @@ article.cloud.talk--2 h1 .wrapper {
 article.cloud.talk--3 h1 .wrapper {
   font-size: 42px;
   line-height: 48px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.cloud.hook h1 {
   width: 400px;
@@ -1527,7 +1555,7 @@ article.cloud.flow--3 h1:after {
 article.cloud.flow--3 h1 .wrapper {
   font-size: 48px;
   line-height: 56px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.cloud.flow--3 h1 .wrapper b {
   color: #333;
