@@ -127,6 +127,12 @@ img {
 }
 
 @font-face {
+  font-family: 'Luga';
+  src: url("../fonts/LugaBold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
   font-family: 'Cormorant Infant';
   src: url("../fonts/cormorantinfant-light-webfont.woff2") format('woff2'), url("../fonts/cormorantinfant-light-webfont.woff") format('woff');
   font-weight: normal;
@@ -477,6 +483,12 @@ html body .font-xxlarge>* * {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.qrcode .wrapper .half h1,
+.qrcode .wrapper .half h2,
+.qrcode .wrapper .half h3 {
+  position: relative;
+  left: 60px;
 }
 .qrcode .wrapper .half h2 {
   text-transform: none;
@@ -947,6 +959,7 @@ article.cover .container {
 }
 article.cover h1 {
   font-size: 96px;
+  font-family: 'Luga', serif;
   font-weight: bold;
   font-style: normal;
   color: #ed3f23;
@@ -1210,6 +1223,7 @@ article.list-2 ul {
   line-height: 80px;
 }
 article.flow-demo .wrapper {
+  mix-blend-mode: multiply;
   height: 100%;
   width: 2200px;
   background-image: url("../images/flow.svg");
