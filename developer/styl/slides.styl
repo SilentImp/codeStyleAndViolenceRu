@@ -1,6 +1,6 @@
 article.contacts
-  background-color #fff 
-  // box-shadow inset 0 0 0 45px #009bd2;
+  background-color #fff
+  box-shadow inset 0 0 0 45px #009bd2;
   .half
   .wrapper
     position static
@@ -19,71 +19,84 @@ article.contacts
     position absolute
     top 50px
     left 60px
+  &:before
+    content:""
+    display block
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-image url(../images/fix-logotype.svg)
+    background-size 900px auto
+    background-position -140px 300px
+    background-repeat no-repeat
+    background-blend-mode: multiply;
+    -webkit-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    pointer-events none
 
 article.cover
-  background-color #f4f4f4 
-  // box-shadow inset 0 0 0 45px #009fd5;
-  background-image url(../images/title-slide.png)
-  background-size cover
-  // &:before 
-  //   content ''
-  //   display block
-  //   position absolute
-  //   width 100%
-  //   height 100%
-  //   z-index 2
-  //   top 0
-  //   bottom 0
-  //   left 0
-  //   right 0
-  //   background-image linear-gradient(to bottom, black 0% black 50%, transparent 50% transparent 100%);
-  //   background-size  100% 2px
-  //   background-repeat repeat
-  // &:before 
-  //   content:""
-  //   display block
-  //   position absolute
-  //   top 0
-  //   bottom 0
-  //   left 0
-  //   right 0
-  //   background-image url(../images/logo-big.png)
-  //   background-size 700px auto
-  //   background-position 50% -160px
-  //   background-repeat no-repeat
-  //   background-blend-mode: multiply;
-  //   -webkit-mix-blend-mode: multiply;
-  //   mix-blend-mode: multiply;
-  // 
-  // &:after 
-  //   content:""
-  //   display block
-  //   position absolute
-  //   top 0
-  //   bottom 0
-  //   left 0
-  //   right 0
-  //   width auto
-  //   height auto
-  //   background-image url(../images/logo-big.png), url(../images/bg.png)
-  //   background-size 700px auto, cover
-  //   background-position 50% 500px, 50% 50%
-  //   border-radius 0
-  //   background-repeat no-repeat
-  //   background-blend-mode: multiply;
-  //   -webkit-mix-blend-mode: multiply;
-  //   mix-blend-mode: multiply;
-  // 
+  background-color #f4f4f4
+  box-shadow inset 0 0 0 45px #009fd5;
+  &:before
+    content ''
+    display block
+    position absolute
+    width 100%
+    height 100%
+    z-index 2
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-image linear-gradient(to bottom, black 0% black 50%, transparent 50% transparent 100%);
+    background-size  100% 2px
+    background-repeat repeat
+  &:before
+    content:""
+    display block
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    background-image url(../images/fix-logotype.svg)
+    background-size 900px auto
+    background-position 50% -160px
+    background-repeat no-repeat
+    background-blend-mode: multiply;
+    -webkit-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+
+  &:after
+    content:""
+    display block
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    width auto
+    height auto
+    background-image url(../images/fix-logotype.svg), url(../images/bg.png)
+    background-size 900px auto, cover
+    background-position 50% 500px, 50% 50%
+    border-radius 0
+    background-repeat no-repeat
+    background-blend-mode: multiply;
+    -webkit-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+
   .container
     position absolute
     top 240px
-    left 60px
+    left 0
     right 0
   h1
-    font-size 96px
-    line-height 120px
-    font-family 'PT Sans', serif
-    font-weight bold
+    font-size 120px
+    font-family 'PT Sans Caption Bold', serif
+    font-weight normal
     font-style normal
     color #ed3f23
     text-align left
@@ -92,7 +105,7 @@ article.cover
     // transform translateX(-50%) translateY(-50%) rotate(-20deg)
     // transform-origin 50% 50%
     b
-      font-size 50px 
+      font-size 50px
       // color red
       // text-shadow 0 0 50px red,  0 0 10px red
     &.left
@@ -124,20 +137,20 @@ article.cloud.lazy
     left auto
     bottom auto
     line-height 400px
-    b 
-      font-size 96px 
+    b
+      font-size 96px
     .wrapper
       font-size 42px
       line-height 64px
     &:after
       transform rotate(-240deg)
       transform-origin 10px -198px
-  &--nope 
+  &--nope
     background-image url(../images/hipster-3.jpg)
     h1 .wrapper
       font-size 180px
       line-height 200px
-  &--trendy 
+  &--trendy
     background-image url(../images/hipster-2.jpg)
     h1 .wrapper
       font-size 56px
@@ -146,18 +159,51 @@ article.cloud.lazy
       padding-left 60px
 
 article.screen
+
+  &--stylelint-webpack
+    background-image url(../images/stylelint-sebpack.png)
+
+  &--eslint-webpack
+    background-image url(../images/eslint-webpack.png)
+
+  &--lint-staged-types
+    background-image url(../images/lint-staged-types.png)
+
+  &--ws-lint-type
+    background-image url(../images/wst-lint-type.png)
+
+  &--vsc
+    &-settings
+      background-image url(../images/vsc-settings.png)
+    &-property
+      background-image url(../images/vsc-property.png)
+    &-check
+      background-image url(../images/vsc-check.png)
+
+  &--documentation
+    background-image url(../images/documentation.png)
+    &-build
+      background-image url(../images/documentation-build.png)
+    &-readme
+      background-image url(../images/documentation-readme.png)
+    &-issues
+      background-image url(../images/documentation-issues.png)
+
+  &--tsc-lint
+    background-image url(../images/tsc-lint.png)
+
   &--ws-stylelint
     background-image url(../images/ws-stylelint-p.png)
-    
+
   &--ws-preserences
     background-image url(../images/sytlelint-ws-preserences.png)
-    
+
   &--ws-errors
     background-image url(../images/stylelint-ws-errors.png)
 
   &--sytlelint-atom
     background-image url(../images/stylelint-atom.png)
-    
+
   &--stylelint-fix
     background-image url(../images/stylelint-fix.png)
 
@@ -167,92 +213,156 @@ article.screen
   &--stylelint
     background-image url(../images/stylelint.svg)
     background-size  contain
-    
+
   &--husky-message
-    background-image url(../images/husky-message.png) 
-    
+    background-image url(../images/husky-message.png)
+
   &--bash
-    background-image url(../images/bash.png) 
-    
+    background-image url(../images/bash.png)
+
   &--windows
     background-image url(../images/windows.jpg)
     background-size cover
-    
+
   &--bc
     background-image url(../images/bi4.jpg)
     background-size cover
 
   &--husky
-    background-image url(../images/husky.png) 
-    
+    background-image url(../images/husky.png)
+
   &--husky-less
-    background-image url(../images/husky-less.png) 
+    background-image url(../images/husky-less.png)
 
   &--eslint-init
-    background-image url(../images/eslint_init.png) 
-    
+    background-image url(../images/eslint_init.png)
+
   &--eslint-errors
-    background-image url(../images/eslint_errors.png) 
-    
+    background-image url(../images/eslint_errors.png)
+
   &--eslint-better
-    background-image url(../images/eslint_better.png) 
-    
+    background-image url(../images/eslint_better.png)
+
   &--eslint-atom
-    background-image url(../images/eslint_atom.png) 
-  
+    background-image url(../images/eslint_atom.png)
+
   &--eslint-atom-fix
-    background-image url(../images/eslint_atom_fix.png) 
-  
+    background-image url(../images/eslint_atom_fix.png)
+
   &--eslint-atom-error
     background-image url(../images/eslint_atom_error.png)
-    
-  &--ws-preferences 
+
+  &--vsc-preferences
+    background-image url(../images/vsc-preferences.png)
+
+  &--vsc-eslint
+    background-image url(../images/vsc-eslint.png)
+
+  &--ws-preferences
     background-image url(../images/ws_preferences.png)
-    
+
   &--ws-eslint
     background-image url(../images/ws_eslint.png)
-    
+
   &--ws-eslint-fix
     background-image url(../images/ws_eslint_fix.png)
-    
+
   &--ws-eslint-error
     background-image url(../images/ws_error.png)
-    
+
   &--ws-editorconfig
     background-image url(../images/ws-editorconfig.png)
-  
+
   &--atom-editorconfig
     background-image url(../images/atom-editorconfig.png)
-    
+
+  &--vsc-editorconfig
+    background-image url(../images/vsc-editor-config.png)
+
   &--prettier
     background-image url(../images/prettier-logo-light.svg)
-  
+
   &--atom-editorconfig-error
     background-image url(../images/atom-editorconfig-error.png)
-    
+
   &--atom-editorconfig-fix
     background-image url(../images/editorconfig.png)
-    
+
   &--protect-branch-1
     background-image url(../images/protect-branch-1.png)
-    
+
   &--protect-branch-2
     background-image url(../images/protect-branch-2.png)
-    
+
   &--protect-push
     background-image url(../images/protect-from-push.png)
-    
+
   &--pushed
     background-image url(../images/pushed.png)
 
+  &--jsdoc
+    background-image url(../images/jsdoc.png)
+
+  &--pr
+    background-image url(../images/pr.png)
+
+  &--codemod
+    background-image url(../images/codemod-react.png)
+
+    &-list
+      background-image url(../images/codemod-list.png)
+
+  &--merge-block
+    background-image url(../images/merge-block.png)
+
+  &--pipe
+    background-image url(../images/pipe.png)
+
+  &--docker
+    background-image url(../images/docker.png)
+
+  &--pipe-fail
+    background-image url(../images/pipe-fail.png)
+
+  &--merge-fail
+    background-image url(../images/merge-fail.png)
+
 article.illustration
+
+  &--docker
+    background-color rgb(60, 158, 233)
+    background-size contain
+    background-image url(../images/docker-logotype.svg)
+
+  &--bogdan
+    background-image url(../images/bogdan.png)
+
+  &--flow
+    background-image url(../images/flow-logotype.svg)
+    background-size auto
+    background-position 50% 50%
+    background-color #2d343a
+
+  &--typescript
+    background-image url(../images/typescript-logotype.png)
+    background-size auto
+    background-position 50% 50%
+    background-color #fff
+
+  &--challenge
+    background-image url(../images/challenge.jpg)
+
+  &--codemod
+    background-color #d7e8ef
+    background-image url(../images/jscodeshift.png)
+    background-size contain
 
   &--end
     background-image url(../images/end.png)
-  
+
   &--punk
     background-image url(../images/punk.jpg)
-  
+
   &--editorconfig
     background-image url(../images/editorconfig.svg)
     background-size  contain
@@ -263,78 +373,85 @@ article.illustration
   &--atom
     background-image url(../images/atom.svg)
     background-size  contain
-    
+
+  &--vsc
+    background-image url(../images/vsc-logotype.svg)
+    background-size  contain
+
   &--ws
     background-image url(../images/ws.svg)
     background-size  contain
 
-  &-b1 
-    background-image url(../images/b1.jpg) 
+  &-b1
+    background-image url(../images/b1.jpg)
 
   &-b2
-    background-image url(../images/b2.jpg) 
-    
+    background-image url(../images/b2.jpg)
+
   &-b25
-    background-image url(../images/b25.jpg) 
+    background-image url(../images/b25.jpg)
 
   &-b3
-    background-image url(../images/b3.jpg) 
+    background-image url(../images/b3.jpg)
 
   &-b3x
-    background-image url(../images/super.jpg) 
+    background-image url(../images/super.jpg)
 
-  &-b4 
-    background-image url(../images/b4.jpg) 
+  &-b4
+    background-image url(../images/b4.jpg)
 
-  &-b5 
-    background-image url(../images/b5.jpg) 
+  &-b5
+    background-image url(../images/b5.jpg)
 
-  &-h1 
-    background-image url(../images/h1.png) 
+  &-h1
+    background-image url(../images/h1.png)
 
   &-h2
-    background-image url(../images/h2.jpg) 
-  
+    background-image url(../images/h2.jpg)
+
   &-h25
-    background-image url(../images/h25.png) 
+    background-image url(../images/h25.png)
 
   &-h3
-    background-image url(../images/h3.jpg) 
+    background-image url(../images/h3.jpg)
 
-  &-h4 
-    background-image url(../images/h4.jpg) 
+  &-h4
+    background-image url(../images/h4.jpg)
 
   &-airbnb
-    background-image url(../images/airbnb.svg) 
+    background-image url(../images/airbnb.svg)
     background-size contain
 
   &-standard
-    background-image url(../images/standard.svg) 
+    background-image url(../images/standard.svg)
     background-size contain
-    
+
+  &-pedant
+    background-image url(../images/pedant.jpg)
+
   &-git-flow
-    background-image url(../images/git-flow.png) 
+    background-image url(../images/git-flow.png)
     background-size contain
-    
+
   &-github
-    background-image url(../images/daftpunktocat.gif) 
+    background-image url(../images/daftpunktocat.gif)
     background-size auto 75%
-    
+
   &-gitlab
-    background-image url(../images/gitlab.svg) 
+    background-image url(../images/gitlab.svg)
     background-size contain
-    
+
   &--indian
-    background-image url(../images/hindu-1.jpg) 
-    
+    background-image url(../images/hindu-1.jpg)
+
   &--eslint
-    background-image url(../images/eslint.svg) 
-    background-size auto 
+    background-image url(../images/eslint.svg)
+    background-size auto
 
 article.list
   &-1
-    
-    h1 
+
+    h1
       font-size 72px
       line-height 80px
       text-align left
@@ -344,7 +461,7 @@ article.list
       font-size 48px
       line-height 56px
       color #ed3f23
-      
+
     b
       color #333
   &-2
@@ -353,7 +470,7 @@ article.list
     ul
       font-size 72px
       line-height 80px
-      
+
 @keyframes flower {
   from {
     transform translateX(0)
@@ -361,16 +478,16 @@ article.list
   to {
     transform translateX(calc( -100% + 100vw))
   }
-} 
-      
+}
+
 article.flow-demo
   .wrapper
     mix-blend-mode: multiply;
     height 100%
     width 2200px
-    background-image url(../images/flow.svg) 
+    background-image url(../images/flow.svg)
     background-repeat no-repeat
-    background-position 50% 50% 
+    background-position 50% 50%
     transform translateX(0)
     animation flower 4s .5s alternate infinite both linear
     animation-play-state paused
@@ -378,7 +495,7 @@ article.flow-demo
     animation-play-state running
 
 article.cloud.voodoo
-  background-image url(../images/end.jpg) 
+  background-image url(../images/end.jpg)
   background-size cover
   background-position 50% 50%
   h1
@@ -397,9 +514,9 @@ article.cloud.voodoo
     &:after
       transform rotate(-222deg)
       transform-origin 10px -195px
-      
+
 article.cloud.choose
-  background-image url(../images/hipster-girl1.png) 
+  background-image url(../images/hipster-girl1.png)
   background-size cover
   background-position 50% 50%
   h1
@@ -411,27 +528,27 @@ article.cloud.choose
     bottom auto
     line-height 400px
     text-align left
-    padding-left 70px 
-    b 
-      font-size 96px 
+    padding-left 70px
+    b
+      font-size 96px
     .wrapper
       font-size 48px
       line-height 56px
     &:after
       transform rotate(-100deg)
       transform-origin 10px -198px
-  &-2 
-    background-image url(../images/hipster-girl2.png) 
-    h1 
+  &-2
+    background-image url(../images/hipster-girl2.png)
+    h1
       width 340px
-      padding-left 60px 
+      padding-left 60px
       .wrapper
         font-size 72px
         line-height 96px
-  &-3 h1 
+  &-3 h1
     width 340px
-    padding-left 60px 
-    
+    padding-left 60px
+
     .wrapper
       font-size 88px
       line-height 88px
@@ -448,8 +565,8 @@ article.cloud.why
     right auto
     bottom 0
     line-height 400px
-    b 
-      font-size 60px 
+    b
+      font-size 60px
       line-height 102px
     .wrapper
       font-size 48px
@@ -457,9 +574,9 @@ article.cloud.why
     &:after
       transform rotate(-105deg)
       transform-origin 10px -198px
-      
+
 article.cloud.change
-  background-image url(../images/think.jpg) 
+  background-image url(../images/think.jpg)
   background-size cover
   background-position 50% 50%
   h1
@@ -471,16 +588,16 @@ article.cloud.change
     bottom auto
     line-height 400px
     text-align left
-    padding-left 80px 
+    padding-left 80px
     .wrapper
       font-size 42px
       line-height 48px
     &:after
       transform rotate(-100deg)
       transform-origin 10px -198px
-      
+
 article.cloud.think
-  background-image url(../images/think.jpg) 
+  background-image url(../images/think.jpg)
   background-size cover
   background-position 50% 50%
   h1
@@ -492,7 +609,7 @@ article.cloud.think
     bottom auto
     line-height 400px
     text-align left
-    padding-left 40px 
+    padding-left 40px
     .wrapper
       font-size 36px
       line-height 42px
@@ -504,6 +621,24 @@ article.cloud.think
       .wrapper
         font-size 56px
         line-height 64px
+  &--types
+    h1
+      .wrapper
+        font-size 64px
+        line-height 72px
+  &--real
+    h1
+      .wrapper
+        font-size 46px
+        line-height 56px
+  &--java
+    h1
+      width 400px
+      padding 0
+      text-align center
+      .wrapper
+        font-size 120px
+        line-height 140px
   &--left
     h1
       .wrapper
@@ -518,9 +653,9 @@ article.cloud.think
         font-size 64px
         line-height 72px
         color #ed3f23
-        
+
 article.cloud.talk
-  background-image url(../images/talk.jpg) 
+  background-image url(../images/talk.jpg)
   background-size cover
   background-position 50% 50%
   h2
@@ -530,7 +665,7 @@ article.cloud.talk
     bottom 35px
     left auto
     top auto
-    line-height 300px 
+    line-height 300px
     .wrapper
       font-size 38px
       line-height 48px
@@ -547,7 +682,7 @@ article.cloud.talk
     bottom auto
     line-height 400px
     text-align left
-    padding-left 40px 
+    padding-left 40px
     .wrapper
       font-size 60px
       line-height 68px
@@ -557,12 +692,16 @@ article.cloud.talk
   &--2 h1 .wrapper
     font-size 48px
     line-height 56px
-    
+
+  &--4 h1 .wrapper
+    font-size 36px
+    line-height 48px
+
   &--3 h1 .wrapper
     font-size 42px
     line-height 48px
     color #ed3f23
-      
+
 article.cloud.hook
   h1
     width 400px
@@ -580,7 +719,7 @@ article.cloud.hook
       transform-origin 10px -197px
 
 article.cloud.artist
-  background-image url(../images/artist.jpg) 
+  background-image url(../images/artist.jpg)
   background-size cover
   background-position 50% 50%
   h1
@@ -592,16 +731,16 @@ article.cloud.artist
     bottom auto
     line-height 400px
     text-align left
-    padding-left 40px 
+    padding-left 40px
     .wrapper
       font-size 36px
       line-height 56px
     &:after
       transform rotate(-90deg)
       transform-origin 10px -198px
-      
+
 article.cloud.flow
-  background-image url(../images/x1.jpg) 
+  background-image url(../images/x1.jpg)
   background-size cover
   background-position 50% 50%
   h1
@@ -621,7 +760,7 @@ article.cloud.flow
       transform rotate(-95deg)
       transform-origin 10px -198px
   &--2
-    background-image url(../images/x2.jpg) 
+    background-image url(../images/x2.jpg)
     h1
       width 400px
       padding-left 0px
@@ -630,11 +769,11 @@ article.cloud.flow
         width 100%
         font-size 72px
         line-height 80px
-      
+
   &--3
-    background-image url(../images/x3.jpg) 
-    background-position 50% 0 
-    h1 
+    background-image url(../images/x3.jpg)
+    background-position 50% 0
+    h1
       top auto
       bottom 40px
       left 350px
@@ -646,8 +785,8 @@ article.cloud.flow
         font-size 48px
         line-height 56px
         color #ed3f23
-        b 
-          color #333 
+        b
+          color #333
 
     // width 400px
     // height 400px
@@ -2081,7 +2220,7 @@ article.center.qrcode.var-5
     font-size 60px
   a
     font-size 42px
-    
+
 article.center.qrcode.var-6
   h2
     font-size 96px

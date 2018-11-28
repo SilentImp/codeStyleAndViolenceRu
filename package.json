@@ -1,9 +1,10 @@
 {
-  "name": "webglspeach",
-  "description": "Speach about game development in webgl",
+  "name": "codestylespeach",
+  "description": "Speach about code style control",
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "gulp build && http-server ./docs",
     "images": "gulp images",
     "gulp": "gulp",
     "deploy": "gulp deploy",
@@ -11,18 +12,18 @@
   },
   "dependencies": {
     "coffee-script": "*",
-    "gulp": "*",
+    "gulp": "^3.0.0",
     "gulp-autoprefixer": "*",
     "gulp-coffee": "*",
     "gulp-concat": "*",
     "gulp-gh-pages": "~0.5.1",
-    "gulp-imagemin": "*",
+    "gulp-imagemin": "^5.0.3",
     "gulp-jade": "*",
-    "gulp-order": "~1.1.1",
+    "gulp-order": "^1.2.0",
     "gulp-pug": "^3.3.0",
     "gulp-stylus": "*",
     "gulp-util": "^3.0.8",
     "pretty-hrtime": "^1.0.3",
-    "recursive-copy": "^1.0.10"
+    "recursive-copy": "^2.0.9"
   }
 }
