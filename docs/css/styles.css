@@ -127,6 +127,18 @@ img {
 }
 
 @font-face {
+  font-family: 'Luga';
+  src: url("../fonts/LugaBold.ttf") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cormorant Infant';
+  src: url("../fonts/cormorantinfant-light-webfont.woff2") format('woff2'), url("../fonts/cormorantinfant-light-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'NEON';
   src: url("../fonts/Heon.ttf") format('truetype');
   font-weight: normal;
@@ -279,7 +291,7 @@ img {
 
 .hljs {
   display: block;
-  background: white;
+  background: transparent;
   color: #4d4d4c;
   padding: 0.5em;
 }
@@ -301,7 +313,7 @@ img {
   right: 0;
   margin: auto;
   text-align: center;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 56px;
 }
 .subtitle p {
@@ -310,7 +322,7 @@ img {
   margin: 4px;
   display: inline;
   padding: 0 8px;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 48px;
 }
 html.scrolling,
@@ -448,6 +460,7 @@ html body .font-xxlarge>* * {
   background-position: 50% 50%;
 }
 .qrcode img {
+  mix-blend-mode: multiply;
   max-width: 90%;
   width: 90%;
   max-height: 70%;
@@ -470,6 +483,12 @@ html body .font-xxlarge>* * {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.qrcode .wrapper .half h1,
+.qrcode .wrapper .half h2,
+.qrcode .wrapper .half h3 {
+  position: relative;
+  left: 60px;
 }
 .qrcode .wrapper .half h2 {
   text-transform: none;
@@ -682,7 +701,11 @@ article {
   width: 1200px;
   height: 675px;
   margin: 20px auto;
-  background-color: #fff;
+  background-color: #f4f4f4;
+  background-image: url("../images/slide.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   color: #000;
   counter-increment: slide;
@@ -844,12 +867,54 @@ html body section#slides article iframe.half:last-child {
   font-style: normal;
 }
 
-article.cover {
-  background-image: url("../images/cover.jpg");
-  background-size: auto 100%;
-  background-position: 50% 50%;
+article.contacts {
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 0 0 45px #009bd2;
+          box-shadow: inset 0 0 0 45px #009bd2;
+}
+article.contacts .half,
+article.contacts .wrapper {
+  position: static;
+}
+article.contacts img {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  left: auto;
+  width: 500px;
+  height: 500px;
+}
+article.contacts a {
+  position: absolute;
+  bottom: 50px;
+  right: 75px;
+}
+article.contacts .about-speaker {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+article.contacts:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/fix-logotype.svg");
+  background-size: 900px auto;
+  background-position: -140px 300px;
   background-repeat: no-repeat;
-  background-color: #000;
+  background-blend-mode: multiply;
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+article.cover {
+  background-color: #f4f4f4;
+  -webkit-box-shadow: inset 0 0 0 45px #009fd5;
+          box-shadow: inset 0 0 0 45px #009fd5;
 }
 article.cover:before {
   content: '';
@@ -867,50 +932,77 @@ article.cover:before {
   background-size: 100% 2px;
   background-repeat: repeat;
 }
-article.cover h1 {
+article.cover:before {
+  content: "";
+  display: block;
   position: absolute;
-  display: inline-block;
-  font-size: 100px;
-  font-family: 'NEON', fantasy;
-  font-weight: 100;
-  letter-spacing: 5px;
-  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-20deg);
-          transform: translateX(-50%) translateY(-50%) rotate(-20deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../images/fix-logotype.svg");
+  background-size: 900px auto;
+  background-position: 50% -160px;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+article.cover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  background-image: url("../images/fix-logotype.svg"), url("../images/bg.png");
+  background-size: 900px auto, cover;
+  background-position: 50% 500px, 50% 50%;
+  border-radius: 0;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  -webkit-mix-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+article.cover .container {
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+}
+article.cover h1 {
+  font-size: 120px;
+  font-family: 'PT Sans Caption Bold', serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #ed3f23;
+  text-align: center;
 }
 article.cover h1 b {
   font-size: 50px;
-  color: #f00;
-  text-shadow: 0 0 50px #f00, 0 0 10px #f00;
 }
 article.cover h1.left {
   top: 50%;
   left: 50%;
-  color: #800080;
-  text-shadow: 0 0 50px #800080, 0 0 10px #800080;
-  margin-top: -30px;
-  margin-left: -100px;
 }
 article.cover h1.right {
   top: 50%;
   left: 50%;
-  color: #f00;
-  text-shadow: 0 0 50px #f00, 0 0 10px #f00;
-  margin-top: 30px;
-  margin-left: 100px;
 }
 article.cloud.lazy {
-  background-image: url("../images/blacksmith.jpg");
+  background-image: url("../images/hipster-1.jpg");
   background-size: cover;
-  background-position: 50% 100%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-color: #000;
 }
 article.cloud.lazy h1 {
   width: 400px;
   height: 400px;
-  right: 40px;
+  right: 80px;
   top: 40px;
   left: auto;
   bottom: auto;
@@ -929,13 +1021,57 @@ article.cloud.lazy h1:after {
   -webkit-transform-origin: 10px -198px;
           transform-origin: 10px -198px;
 }
+article.cloud.lazy--nope {
+  background-image: url("../images/hipster-3.jpg");
+}
 article.cloud.lazy--nope h1 .wrapper {
   font-size: 180px;
   line-height: 200px;
 }
+article.cloud.lazy--trendy {
+  background-image: url("../images/hipster-2.jpg");
+}
 article.cloud.lazy--trendy h1 .wrapper {
   font-size: 56px;
   line-height: 72px;
+  text-align: left;
+  padding-left: 60px;
+}
+article.screen--stylelint-webpack {
+  background-image: url("../images/stylelint-sebpack.png");
+}
+article.screen--eslint-webpack {
+  background-image: url("../images/eslint-webpack.png");
+}
+article.screen--lint-staged-types {
+  background-image: url("../images/lint-staged-types.png");
+}
+article.screen--ws-lint-type {
+  background-image: url("../images/wst-lint-type.png");
+}
+article.screen--vsc-settings {
+  background-image: url("../images/vsc-settings.png");
+}
+article.screen--vsc-property {
+  background-image: url("../images/vsc-property.png");
+}
+article.screen--vsc-check {
+  background-image: url("../images/vsc-check.png");
+}
+article.screen--documentation {
+  background-image: url("../images/documentation.png");
+}
+article.screen--documentation-build {
+  background-image: url("../images/documentation-build.png");
+}
+article.screen--documentation-readme {
+  background-image: url("../images/documentation-readme.png");
+}
+article.screen--documentation-issues {
+  background-image: url("../images/documentation-issues.png");
+}
+article.screen--tsc-lint {
+  background-image: url("../images/tsc-lint.png");
 }
 article.screen--ws-stylelint {
   background-image: url("../images/ws-stylelint-p.png");
@@ -962,6 +1098,17 @@ article.screen--stylelint {
 article.screen--husky-message {
   background-image: url("../images/husky-message.png");
 }
+article.screen--bash {
+  background-image: url("../images/bash.png");
+}
+article.screen--windows {
+  background-image: url("../images/windows.jpg");
+  background-size: cover;
+}
+article.screen--bc {
+  background-image: url("../images/bi4.jpg");
+  background-size: cover;
+}
 article.screen--husky {
   background-image: url("../images/husky.png");
 }
@@ -986,6 +1133,12 @@ article.screen--eslint-atom-fix {
 article.screen--eslint-atom-error {
   background-image: url("../images/eslint_atom_error.png");
 }
+article.screen--vsc-preferences {
+  background-image: url("../images/vsc-preferences.png");
+}
+article.screen--vsc-eslint {
+  background-image: url("../images/vsc-eslint.png");
+}
 article.screen--ws-preferences {
   background-image: url("../images/ws_preferences.png");
 }
@@ -1004,8 +1157,17 @@ article.screen--ws-editorconfig {
 article.screen--atom-editorconfig {
   background-image: url("../images/atom-editorconfig.png");
 }
+article.screen--vsc-editorconfig {
+  background-image: url("../images/vsc-editor-config.png");
+}
+article.screen--prettier {
+  background-image: url("../images/prettier-logo-light.svg");
+}
 article.screen--atom-editorconfig-error {
   background-image: url("../images/atom-editorconfig-error.png");
+}
+article.screen--atom-editorconfig-fix {
+  background-image: url("../images/editorconfig.png");
 }
 article.screen--protect-branch-1 {
   background-image: url("../images/protect-branch-1.png");
@@ -1019,6 +1181,64 @@ article.screen--protect-push {
 article.screen--pushed {
   background-image: url("../images/pushed.png");
 }
+article.screen--jsdoc {
+  background-image: url("../images/jsdoc.png");
+}
+article.screen--pr {
+  background-image: url("../images/pr.png");
+}
+article.screen--codemod {
+  background-image: url("../images/codemod-react.png");
+}
+article.screen--codemod-list {
+  background-image: url("../images/codemod-list.png");
+}
+article.screen--merge-block {
+  background-image: url("../images/merge-block.png");
+}
+article.screen--pipe {
+  background-image: url("../images/pipe.png");
+}
+article.screen--docker {
+  background-image: url("../images/docker.png");
+}
+article.screen--pipe-fail {
+  background-image: url("../images/pipe-fail.png");
+}
+article.screen--merge-fail {
+  background-image: url("../images/merge-fail.png");
+}
+article.illustration--docker {
+  background-color: #3c9ee9;
+  background-size: contain;
+  background-image: url("../images/docker-logotype.svg");
+}
+article.illustration--bogdan {
+  background-image: url("../images/bogdan.png");
+}
+article.illustration--flow {
+  background-image: url("../images/flow-logotype.svg");
+  background-size: auto;
+  background-position: 50% 50%;
+  background-color: #2d343a;
+}
+article.illustration--typescript {
+  background-image: url("../images/typescript-logotype.png");
+  background-size: auto;
+  background-position: 50% 50%;
+  background-color: #fff;
+}
+article.illustration--challenge {
+  background-image: url("../images/challenge.jpg");
+}
+article.illustration--codemod {
+  background-color: #d7e8ef;
+  background-image: url("../images/jscodeshift.png");
+  background-size: contain;
+}
+article.illustration--end {
+  background-image: url("../images/end.png");
+}
 article.illustration--punk {
   background-image: url("../images/punk.jpg");
 }
@@ -1031,6 +1251,10 @@ article.illustration--hook {
 }
 article.illustration--atom {
   background-image: url("../images/atom.svg");
+  background-size: contain;
+}
+article.illustration--vsc {
+  background-image: url("../images/vsc-logotype.svg");
   background-size: contain;
 }
 article.illustration--ws {
@@ -1048,6 +1272,9 @@ article.illustration-b25 {
 }
 article.illustration-b3 {
   background-image: url("../images/b3.jpg");
+}
+article.illustration-b3x {
+  background-image: url("../images/super.jpg");
 }
 article.illustration-b4 {
   background-image: url("../images/b4.jpg");
@@ -1078,6 +1305,9 @@ article.illustration-standard {
   background-image: url("../images/standard.svg");
   background-size: contain;
 }
+article.illustration-pedant {
+  background-image: url("../images/pedant.jpg");
+}
 article.illustration-git-flow {
   background-image: url("../images/git-flow.png");
   background-size: contain;
@@ -1106,7 +1336,7 @@ article.list-1 h1 {
 article.list-1 ul {
   font-size: 48px;
   line-height: 56px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.list-1 b {
   color: #333;
@@ -1119,6 +1349,7 @@ article.list-2 ul {
   line-height: 80px;
 }
 article.flow-demo .wrapper {
+  mix-blend-mode: multiply;
   height: 100%;
   width: 2200px;
   background-image: url("../images/flow.svg");
@@ -1150,8 +1381,11 @@ article.cloud.voodoo h1 {
   line-height: 400px;
 }
 article.cloud.voodoo h1 .wrapper {
-  font-size: 40px;
-  line-height: 56px;
+  font-size: 38px;
+  line-height: 54px;
+}
+article.cloud.voodoo h1 .wrapper b {
+  color: #f00;
 }
 article.cloud.voodoo h1:after {
   -webkit-transform: rotate(-222deg);
@@ -1160,20 +1394,20 @@ article.cloud.voodoo h1:after {
           transform-origin: 10px -195px;
 }
 article.cloud.choose {
-  background-image: url("../images/choose.jpg");
+  background-image: url("../images/hipster-girl1.png");
   background-size: cover;
-  background-position: 50% -300px;
+  background-position: 50% 50%;
 }
 article.cloud.choose h1 {
-  width: 300px;
+  width: 330px;
   height: 400px;
-  left: 40px;
-  top: auto;
+  left: 160px;
+  top: 40px;
   right: auto;
-  bottom: 40px;
+  bottom: auto;
   line-height: 400px;
   text-align: left;
-  padding-left: 100px;
+  padding-left: 70px;
 }
 article.cloud.choose h1 b {
   font-size: 96px;
@@ -1183,22 +1417,33 @@ article.cloud.choose h1 .wrapper {
   line-height: 56px;
 }
 article.cloud.choose h1:after {
-  -webkit-transform: rotate(-115deg);
-          transform: rotate(-115deg);
+  -webkit-transform: rotate(-100deg);
+          transform: rotate(-100deg);
   -webkit-transform-origin: 10px -198px;
           transform-origin: 10px -198px;
+}
+article.cloud.choose-2 {
+  background-image: url("../images/hipster-girl2.png");
 }
 article.cloud.choose-2 h1 {
   width: 340px;
   padding-left: 60px;
+}
+article.cloud.choose-2 h1 .wrapper {
+  font-size: 72px;
+  line-height: 96px;
 }
 article.cloud.choose-3 h1 {
   width: 340px;
   padding-left: 60px;
 }
 article.cloud.choose-3 h1 .wrapper {
-  font-size: 72px;
-  line-height: 80px;
+  font-size: 88px;
+  line-height: 88px;
+}
+article.cloud.choose-3 h1 .wrapper b {
+  font-size: 56px;
+  line-height: 56px;
 }
 article.cloud.why h1 {
   width: 400px;
@@ -1210,7 +1455,7 @@ article.cloud.why h1 {
   line-height: 400px;
 }
 article.cloud.why h1 b {
-  font-size: 96px;
+  font-size: 60px;
   line-height: 102px;
 }
 article.cloud.why h1 .wrapper {
@@ -1240,8 +1485,8 @@ article.cloud.change h1 {
   padding-left: 80px;
 }
 article.cloud.change h1 .wrapper {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 42px;
+  line-height: 48px;
 }
 article.cloud.change h1:after {
   -webkit-transform: rotate(-100deg);
@@ -1255,7 +1500,7 @@ article.cloud.think {
   background-position: 50% 50%;
 }
 article.cloud.think h1 {
-  width: 320px;
+  width: 360px;
   height: 400px;
   left: 200px;
   top: 35px;
@@ -1263,17 +1508,42 @@ article.cloud.think h1 {
   bottom: auto;
   line-height: 400px;
   text-align: left;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 article.cloud.think h1 .wrapper {
-  font-size: 42px;
-  line-height: 48px;
+  font-size: 36px;
+  line-height: 42px;
 }
 article.cloud.think h1:after {
   -webkit-transform: rotate(-100deg);
           transform: rotate(-100deg);
   -webkit-transform-origin: 10px -198px;
           transform-origin: 10px -198px;
+}
+article.cloud.think--repo h1 .wrapper {
+  font-size: 56px;
+  line-height: 64px;
+}
+article.cloud.think--types h1 .wrapper {
+  font-size: 64px;
+  line-height: 72px;
+}
+article.cloud.think--real h1 .wrapper {
+  font-size: 46px;
+  line-height: 56px;
+}
+article.cloud.think--java h1 {
+  width: 400px;
+  padding: 0;
+  text-align: center;
+}
+article.cloud.think--java h1 .wrapper {
+  font-size: 120px;
+  line-height: 140px;
+}
+article.cloud.think--left h1 .wrapper {
+  font-size: 42px;
+  line-height: 48px;
 }
 article.cloud.think--swear h1 {
   width: 400px;
@@ -1283,7 +1553,7 @@ article.cloud.think--swear h1 {
 article.cloud.think--swear h1 .wrapper {
   font-size: 64px;
   line-height: 72px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.cloud.talk {
   background-image: url("../images/talk.jpg");
@@ -1302,7 +1572,7 @@ article.cloud.talk h2 {
 article.cloud.talk h2 .wrapper {
   font-size: 38px;
   line-height: 48px;
-  color: #c00;
+  color: #ed3f23;
 }
 article.cloud.talk h2:after {
   -webkit-transform: rotate(105deg);
@@ -1311,7 +1581,7 @@ article.cloud.talk h2:after {
           transform-origin: 10px -148px;
 }
 article.cloud.talk h1 {
-  width: 320px;
+  width: 360px;
   height: 400px;
   left: 35px;
   top: 35px;
@@ -1319,11 +1589,11 @@ article.cloud.talk h1 {
   bottom: auto;
   line-height: 400px;
   text-align: left;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 article.cloud.talk h1 .wrapper {
-  font-size: 64px;
-  line-height: 72px;
+  font-size: 60px;
+  line-height: 68px;
 }
 article.cloud.talk h1:after {
   -webkit-transform: rotate(-55deg);
@@ -1335,10 +1605,14 @@ article.cloud.talk--2 h1 .wrapper {
   font-size: 48px;
   line-height: 56px;
 }
+article.cloud.talk--4 h1 .wrapper {
+  font-size: 36px;
+  line-height: 48px;
+}
 article.cloud.talk--3 h1 .wrapper {
   font-size: 42px;
   line-height: 48px;
-  color: #d00;
+  color: #ed3f23;
 }
 article.cloud.hook h1 {
   width: 400px;
@@ -1365,7 +1639,7 @@ article.cloud.artist {
   background-position: 50% 50%;
 }
 article.cloud.artist h1 {
-  width: 320px;
+  width: 360px;
   height: 400px;
   left: 300px;
   top: 40px;
@@ -1373,10 +1647,10 @@ article.cloud.artist h1 {
   bottom: auto;
   line-height: 400px;
   text-align: left;
-  padding-left: 80px;
+  padding-left: 40px;
 }
 article.cloud.artist h1 .wrapper {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 56px;
 }
 article.cloud.artist h1:after {
@@ -1402,8 +1676,8 @@ article.cloud.flow h1 {
   padding-left: 60px;
 }
 article.cloud.flow h1 .wrapper {
-  font-size: 64px;
-  line-height: 72px;
+  font-size: 48px;
+  line-height: 56px;
 }
 article.cloud.flow h1:after {
   -webkit-transform: rotate(-95deg);
@@ -1414,9 +1688,15 @@ article.cloud.flow h1:after {
 article.cloud.flow--2 {
   background-image: url("../images/x2.jpg");
 }
+article.cloud.flow--2 h1 {
+  width: 400px;
+  padding-left: 0px;
+}
 article.cloud.flow--2 h1 .wrapper {
-  font-size: 56px;
-  line-height: 64px;
+  text-align: center;
+  width: 100%;
+  font-size: 72px;
+  line-height: 80px;
 }
 article.cloud.flow--3 {
   background-image: url("../images/x3.jpg");
@@ -1426,15 +1706,17 @@ article.cloud.flow--3 h1 {
   top: auto;
   bottom: 40px;
   left: 350px;
+  padding-left: 40px;
+  width: 360px;
 }
 article.cloud.flow--3 h1:after {
   -webkit-transform: rotate(-105deg);
           transform: rotate(-105deg);
 }
 article.cloud.flow--3 h1 .wrapper {
-  font-size: 56px;
-  line-height: 64px;
-  color: #d00;
+  font-size: 48px;
+  line-height: 56px;
+  color: #ed3f23;
 }
 article.cloud.flow--3 h1 .wrapper b {
   color: #333;

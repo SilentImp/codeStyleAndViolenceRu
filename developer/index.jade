@@ -24,9 +24,9 @@ block slides
 
   article.illustration.illustration-b1
     .subtitle  
-      p — Не то что бы именно надо. 
+      p — Не то что бы именно надо. 
         br
-        |  Пока ты работаешь один.
+        |  Пока ты работаешь один.
 
   article.illustration.illustration-h2
     .subtitle  
@@ -60,9 +60,9 @@ block slides
 
   article.illustration.illustration-b5
     .subtitle  
-      p … и в определенный момент становится очевидно, 
+      p … и в определенный момент становится очевидно, 
         br
-        |  что нужны правила.
+        |  что нужны правила.
 
   article.center.list-1
     .wrapper
@@ -103,7 +103,7 @@ block slides
     .subtitle
       p — Потому что мы тут с вами не лучший мир строим, мы пишем программы, чтобы заработать деньги, 
         br
-        |  купить ружье … и … о чем это я?
+        |  купить ружье … и … о чем это я?
 
   article.lazy.lazy--trendy.cloud.center
     h1 
@@ -123,14 +123,14 @@ block slides
     h1 
       p.wrapper НЕТ
     .subtitle
-      p — Всем начхать используете вы пробелы или табы: IDE отлично   справится и с теми, и с другими. Важно единообразие.
+      p — Всем начхать используете вы пробелы или табы: IDE отлично   справится и с теми, и с другими. Важно единообразие.
 
   article.illustration.illustration-airbnb
 
   article.center.qrcode.var-2
       .wrapper
           .half
-              h2 Airbnb JavaScript Style Guide
+              h2 Airbnb JavaScript Style Guide
           .half
               img(src="images/airbnb_js.svg", alt="QRCODE with link to Airbnb js style guide")
           p
@@ -139,7 +139,7 @@ block slides
   article.center.qrcode.var-2
       .wrapper
           .half
-              h2 Airbnb CSS Style Guide
+              h2 Airbnb CSS Style Guide
           .half
               img(src="images/airbnb_js.svg", alt="QRCODE with link to Airbnb js style guide")
           p
@@ -151,18 +151,30 @@ block slides
   article.center.qrcode.var-2
       .wrapper
           .half
-              h2 Standard JavaScript Style Guide
+              h2 Standard JavaScript Style Guide
           .half
               img(src="images/standard_js.svg", alt="QRCODE with link to Airbnb js style guide")
           p
               a(href="https://github.com/standard/standard", data-click=true) https://github.com/standard/standard
+
+  article.illustration.illustration-pedant
+
+  article.center.qrcode.var-2
+      .wrapper
+          .half
+              h2 Pedant Preset
+          .half
+              img(src="images/pedant.svg", alt="QRCODE with link to Pedant preset")
+          p
+              a(href="https://github.com/blond/eslint-config-pedant", data-click=true) https://goo.gl/6jkjYZ
+
 
   article.illustration.illustration-git-flow
 
   article.center.qrcode.var-2
       .wrapper
           .half
-              h2 A successful Git branching model
+              h2 A successful Git branching model
           .half
               img(src="images/git-flow-link.svg", alt="QRCODE with link to original gitflow article")
           p
@@ -201,7 +213,7 @@ block slides
 
   article.illustration.illustration--indian
     .subtitle  
-      p — Да! Это ваши коллеги из отделения в Дели бегут, чтобы внедрить   ваш кодстайл. Вот прямо-таки вприпрыжку и волосы назад!
+      p — Да! Это ваши коллеги из отделения в Дели бегут, чтобы внедрить   ваш кодстайл. Вот прямо-таки вприпрыжку и волосы назад!
 
   article.illustration.illustration--indian
     .subtitle
@@ -213,8 +225,8 @@ block slides
         br
         | Не смейте меня ограничивать!
     .subtitle  
-      p — Если хотите внедрить кодстайл, то его нужно явно   определить,
-        |  автоматически проверять и принуждать использовать. 
+      p — Если хотите внедрить кодстайл, то его нужно явно   определить,
+        |  автоматически проверять и принуждать использовать. 
 
   article.illustration.illustration--editorconfig
 
@@ -237,6 +249,14 @@ block slides
           trim_trailing_whitespace = true
           insert_final_newline = true
 
+  article.illustration.illustration--vsc
+  
+  article.screen.screen--vsc-editorconfig
+
+  article.illustration.illustration--ws
+
+  article.screen.screen--ws-editorconfig
+
   article.illustration.illustration--atom
 
   article.screen.screen--atom-editorconfig
@@ -244,10 +264,6 @@ block slides
   article.screen.screen--atom-editorconfig-error
     
   article.screen.screen--atom-editorconfig-fix
-
-  article.illustration.illustration--ws
-
-  article.screen.screen--ws-editorconfig
 
   article.center.qrcode.var-6
       .wrapper
@@ -386,6 +402,21 @@ block slides
               --fix
 
   article.screen.screen--eslint-better
+    
+  article.illustration.illustration--codemod
+
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 Codemod jscodeshift
+          .half
+              img(src="images/jscodeshift.svg", alt="QRCODE with link to jscodeshift")
+          p
+              a(href="https://github.com/facebook/jscodeshift", data-click=true) https://goo.gl/8M1jvp
+
+  article.screen.screen--codemod
+    
+  article.screen.screen--codemod-list
 
   article.center.code-1
     .wrapper
@@ -413,17 +444,16 @@ block slides
         br
         | мне это ручками каждый раз запускать?
     .subtitle  
-      p — Чтобы видеть проблемы в процессе работы 
+      p — Чтобы видеть проблемы в процессе работы 
         br
-        |  нужно настроить редактор
+        |  нужно настроить редактор
 
-  article.illustration.illustration--atom
+  article.illustration.illustration--vsc
+  
+  article.screen.screen--vsc-preferences
+  
+  article.screen.screen--vsc-eslint
 
-  article.screen.screen--eslint-atom
-
-  article.screen.screen--eslint-atom-fix
-
-  article.screen.screen--eslint-atom-error
 
   article.illustration.illustration--ws
 
@@ -434,6 +464,59 @@ block slides
   article.screen.screen--ws-eslint-fix
 
   article.screen.screen--ws-eslint-error
+
+
+  article.illustration.illustration--atom
+
+  article.screen.screen--eslint-atom
+
+  article.screen.screen--eslint-atom-fix
+
+  article.screen.screen--eslint-atom-error
+
+  article.change.cloud.center
+    h1 
+      p.wrapper Я вообще через ssh!
+    .subtitle  
+      p — Добавь в процесс сборки вебпаком
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D eslint-loader
+  
+  article.center.code-1
+    .wrapper
+      pre
+        code.javascript.
+          // webpack.config.js
+          rules: [
+            { test: /\.js$/,
+              exclude: /node_modules/,
+              use: [ "babel-loader", {
+                  loader: "eslint-loader",
+                  options: {
+                    fix: true,
+          }}]}],
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ webpack-cli --watch
+
+  article.screen.screen--eslint-webpack
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Пример с webpack eslint-loader
+      .half
+        img(src="images/webpack-eslint.svg", alt="QRCODE with link")
+      p
+        a(href="https://github.com/SilentImp/lintWebpack", data-click=true) https://github.com/SilentImp/lintWebpack
+
 
   article.think.cloud.center
     h1 
@@ -476,12 +559,11 @@ block slides
 
   article.think.cloud.center
     h1 
-      p.wrapper Я себе что, враг? И вообще — сложно же.
-
+      p.wrapper Я себе что, враг? И вообще — сложно же.
 
   article.think.think--repo.cloud.center
     h1 
-      p.wrapper В репу хуки не добавить.
+      p.wrapper В репу хуки не добавить
 
 
   article.center.code-9
@@ -603,9 +685,321 @@ block slides
     h1 
       p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;
 
+  article.think.think--types.cloud.center
+    h1 
+      p.wrapper О! А что с типами данных?
+  
+  article.illustration.illustration--challenge
+    
+  article.illustration.illustration--flow
+  article.center.code-0
+    .wrapper
+      pre
+        code.javascript.
+          // @flow
+          function concat(a: string, b: string) {
+            return a + b;
+          }
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 Flow
+          .half
+              img(src="images/flow-code.svg", alt="QRCODE with link to flow")
+          p
+              a(href="https://flow.org/", data-click=true) https://flow.org/
+
+  article.illustration.illustration--typescript
+
+  article.center.qrcode.var-6
+      .wrapper
+          .half
+              h2 Typescript
+          .half
+              img(src="images/typescript.svg", alt="QRCODE with link to flow")
+          p
+              a(href="https://www.typescriptlang.org/", data-click=true) https://www.typescriptlang.org/
+  article.center.code-0
+    .wrapper
+      pre
+        code.javascript.
+          function concat(a: string, b: string) {
+            return a + b;
+          }
+
+  article.think.think--real.cloud.center
+    h1 
+      p.wrapper Сделаем из JavaScript настоящий язык!
+
+  article.think.think--java.cloud.center
+    h1 
+      p.wrapper JAVA
+
+  article.center.qrcode.var-6
+    .wrapper
+        .half
+            h2 JSDoc
+        .half
+            img(src="images/jsdoc.svg", alt="QRCODE with link to jsdoc")
+        p
+            a(href="http://usejsdoc.org/", data-click=true) http://usejsdoc.org/
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.javascript.
+          /**
+           * Cities - Class to work with unique cities
+           * @class
+           * @namespace
+           */
+          class Cities {
+            /**
+             * @type {array}
+             * @static
+             */
+            static collector = [];
+          }
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.javascript.
+          /**
+           * getCity - Get city by index
+           * @throws {Error} if index not found
+           * @param {number} index city index
+           * @return {string} city name
+           */
+          getCity(index) {
+            // …
+          }
+
+  article.think.think--types.cloud.center
+    h1 
+      p.wrapper И что это делает?
+    .subtitle  
+      p — Ничего.
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm i -D jsdoc
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.bash.
+          // package.json
+          "scripts": {
+            "doc": "jsdoc src/*.js -d docs"
+          }
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm run doc
+  article.screen.screen--jsdoc
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm i -D jsdoc-babel
+  article.center.code-0
+    .wrapper
+      pre
+        code.json.
+          // conf.json
+          {
+            "plugins": ["node_modules/jsdoc-babel"]
+          }
+  article.screen.screen--documentation
+  article.center.qrcode.var-5
+    .wrapper
+        .half
+            h2 Documentation.js
+        .half
+            img(src="images/documentation.svg", alt="QRCODE with link to jsdoc")
+        p
+            a(href="http://documentation.js.org/", data-click=true) http://documentation.js.org/
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm i -D documentation
+  article.center.code-7
+    .wrapper
+      pre
+        code.json.
+          // package.json
+          "scripts": {
+            "doc": "documentation 
+              build src/*.js 
+              -f html -o docs"
+          }
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm run doc
+  article.screen.screen--documentation-build
+  article.center.code-7
+    .wrapper
+      pre
+        code.md.
+          // README.md
+          # Cities
+          Cool librarie that …
+
+          # API
+  article.center.code-7
+    .wrapper
+      pre
+        code.json.
+          // package.json
+          "scripts": {
+            "readme": "documentation 
+              readme src/*.js 
+              --section=API"
+          }
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm run readme
+  article.screen.screen--documentation-readme
+  article.screen.screen--documentation-issues
+
+  article.think.think--real.cloud.center
+    h1 
+      p.wrapper Здорово. Линтинг типов где?
+    .subtitle  
+      p — TS умеет читать JSDoc.
+  
+  article.illustration.illustration--vsc
+  
+  article.screen.screen--vsc-settings
+  
+  article.screen.screen--vsc-property
+  
+  article.screen.screen--vsc-check
+    
+  article.center.qrcode.var-5
+    .wrapper
+      .half
+          h2 Type Safe JavaScript with JSDoc
+      .half
+          img(src="images/vs-jsdoc.svg", alt="QRCODE with link to article about configuring jsdoc type checks")
+      p
+          a(href="https://medium.com/@trukrs/type-safe-javascript-with-jsdoc-7a2a63209b76", data-click=true) https://goo.gl/sBHmmH
+
+    
+  article.illustration.illustration--ws
+  
+  article.screen.screen--ws-lint-type
+  
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm i -D typescript
+
+  article.center.code-3
+    .wrapper
+      pre
+        code.json.
+          // tsconfig.json
+          {
+            "compilerOptions": {
+              "target": "ESNext",
+              "noEmit": true,
+              "allowJs": true,
+              "checkJs": true,
+            },
+            "include": [
+              "src/**/*.js"
+            ]
+          }
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.json.
+          // package.json
+          "scripts": {
+            "lint": "tsc"
+          }
+  article.center.code-0
+    .wrapper
+      pre
+        code.javascript.
+          /**
+           * add - Add new city
+           * @param {string} word city name
+           */
+          add(word) {
+            //…
+          }
+  article.center.code-9
+    .wrapper
+      pre
+        code.javascript.
+          citys.add(222);
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          npm run lint
+  article.screen.screen--tsc-lint
+
+  article.center.code-2
+    .wrapper
+      pre
+        code.js.
+          // package.json
+          { // …
+            "scripts": { // …
+              "precommit": "lint-staged"
+            },
+            "lint-staged": { // …
+              "*.{js,jsx}": "tsc --target ESNext 
+                --noEmit --allowJs --checkJs"
+            }
+          }
+  
+  article.screen.screen--lint-staged-types
+
+  article.center.qrcode.var-5
+    .wrapper
+      .half
+          h2 Репозиторий с примером
+      .half
+          img(src="images/linttyperepo.svg", alt="QRCODE with link to example repo")
+      p
+          a(href="https://github.com/SilentImp/lintTypes", data-click=true) https://github.com/SilentImp/lintTypes
+
+  article.illustration.illustration--bogdan
+
+  article.center.qrcode.var-5
+    .wrapper
+      .half
+          h2 Bogdan Plieshka
+      .half
+          img(src="images/bogdan.svg", alt="QRCODE with link to Bogdans cv")
+      p
+          a(href="https://godban.github.io/", data-click=true) https://godban.github.io/
+
+
+  article.think.think--swear.cloud.center
+    h1 
+      p.wrapper ТЫ &#x2589;&#x2589;&#x2589;!
+
+
   article.talk.cloud.center
     h1 
-      p.wrapper А что там со стилями?
+      p.wrapper А что там со стилями?
 
   
   article.screen.screen--stylelint
@@ -643,12 +1037,13 @@ block slides
   article.center.qrcode.var-6
     .wrapper
       .half
-        h2 Airbnb Stylelint Config PR
+        h2 Airbnb Stylelint Config PR
       .half
         img(src="images/stylelint-airbnb-issue.svg", alt="QRCODE with link")
       p
         a(href="https://github.com/airbnb/css/pull/56/files#diff-c8daf3b8e5463995761e914cf32b47a5", data-click=true) http://bit.ly/2zTHQHN
 
+  article.screen.screen--pr
 
   article.center.qrcode.var-6
     .wrapper
@@ -724,6 +1119,77 @@ block slides
 
   article.screen.screen--ws-errors
 
+  article.talk.talk--4.cloud.center
+    h1 
+      p.wrapper А сейчас ты будешь повторять историю про вебпак?
+    .subtitle
+      p — Почти слово в слово.
+
+  article.center.code-6
+    .wrapper
+      pre
+        code.bash.
+          $ npm i -D postcss-loader 
+          $ npm i -D postcss-syntax
+          $ npm i -D mini-css-extract-plugin
+  
+  article.center.code-0
+    .wrapper
+      pre
+        code.json.
+          // .stylelintrc
+          {
+            "syntax": "postcss-syntax",
+            "extends": "stylelint-config-standard"
+          }
+  
+  article.center.code-7
+    .wrapper
+      pre
+        code.javascript.
+          // postcss.config.js
+          module.exports = () => ({
+            plugins: {
+              'stylelint': true,
+            },
+          });
+  
+  article.center.code-3
+    .wrapper
+      pre
+        code.javascript.
+          // webpack.config.js
+          rules: [
+            {
+              test: /\.css/,
+              use: [ MiniCssExtractPlugin.loader,
+                { loader: 'css-loader',
+                  options: {
+                    minimize: true,
+                    modules: true,
+                    importLoaders: 1,
+                    localIdentName: '[local]~~~~[hash:base64:24]',
+                }},
+                'postcss-loader']}],
+
+  article.center.code-9
+    .wrapper
+      pre
+        code.bash.
+          $ webpack-cli --watch
+
+  article.screen.screen--stylelint-webpack
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Пример с webpack stylelint
+      .half
+        img(src="images/webpack-eslint.svg", alt="QRCODE with link")
+      p
+        a(href="https://github.com/SilentImp/lintWebpack", data-click=true) https://github.com/SilentImp/lintWebpack
+
+
   article.talk.talk--2.cloud.center
     h1 
       p.wrapper И никаких хуков, да?
@@ -748,7 +1214,7 @@ block slides
 
   article.talk.talk--3.cloud.center
     h1 
-      p.wrapper &#x2589;&#x2589;&#x2589; &#x2589;&#x2589; &#x2589;
+      p.wrapper &#x2589;&#x2589;&#x2589; &#x2589;&#x2589; &#x2589;
         br
         | &#x2589;&#x2589;&#x2589;&#x2589;&#x2589;
 
@@ -933,18 +1399,68 @@ block slides
 
   article.screen.screen--pushed
 
+  article.flow.flow--2.cloud.center
+    h1 
+      p.wrapper --no-verify!
+    .subtitle  
+      p — Сейчас поправим!
+
+  article.screen.screen--merge-block
+
+  article.center.code-7
+    .wrapper
+      pre
+        code.yml.
+          // .gitlab-ci.yml
+          image: node:latest
+
+          stages:
+          - test
+
+  article.center.code-0
+    .wrapper
+      pre
+        code.yml.
+          // .gitlab-ci.yml
+          lint:
+            stage: test
+            before_script:
+              - npm i
+            script:
+              - npm run lint
+
+  article.screen.screen--pipe
+    
+  article.screen.screen--pipe-fail
+    
+  article.screen.screen--merge-fail
+    
+  article.illustration.illustration--docker
+    
+  article.screen.screen--docker
+
+  article.center.qrcode.var-6
+    .wrapper
+      .half
+        h2 Docker Hub
+      .half
+        img(src="images/docker.svg", alt="QRCODE with link")
+      p
+        a(href="https://hub.docker.com/search/?isAutomated=0&isOfficial=1&page=1&pullCount=0&q=node&starCount=0", data-click=true) https://goo.gl/3YkC13
+
+
   article.flow.flow--3.cloud.center
     h1 
       p.wrapper &#x2589;&#x2589;&#x2589;&#x2589;&#x2589;
         b ,
         br
-        b что дальше?
+        b что дальше?
 
   article.illustration.illustration--punk
 
   article.voodoo.cloud.center
     h1 
-      p.wrapper Просто хотел дать тебе знать,
+      p.wrapper Просто хотел дать тебе знать,
         br
         | что мы сделали куклу вуду,
         br
@@ -963,5 +1479,3 @@ block slides
 
       p
         a(href="https://github.com/SilentImp/codeStyleAndViolenceRu", data-click=true) http://bit.ly/2AVZquZ
-
-  article.illustration.illustration--end

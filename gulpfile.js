@@ -20,12 +20,12 @@ var gulp          = require('gulp')
                           , jade:       './developer/*.jade'
                         }
                       , 'build': {
-                          examples:   './build/examples'
-                          , css:      './build/css/'
-                          , images:   './build/images/'
-                          , js:       './build/js/'
-                          , fonts:    './build/fonts/'
-                          , html:     './build/'
+                          examples:   './docs/examples'
+                          , css:      './docs/css/'
+                          , images:   './docs/images/'
+                          , js:       './docs/js/'
+                          , fonts:    './docs/fonts/'
+                          , html:     './docs/'
                         }
                       };
 
@@ -92,5 +92,7 @@ gulp.task('deploy', function () {
           }));
 });
 
+gulp.task('build', ['stylus','jade', 'js', 'fonts', 'coffee', 'images']);
 
-gulp.task('default', ['stylus','jade', 'js', 'fonts', 'coffee', 'images', 'watch']);
+
+gulp.task('default', ['build', 'watch']);
