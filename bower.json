@@ -1,11 +1,11 @@
 {
-  "name": "offline-first",
+  "name": "codestyleandviolence",
   "version": "0.0.0",
-  "homepage": "https://github.com/SilentImp/offline-first",
+  "homepage": "https://github.com/SilentImp/codestyleandviolenceru",
   "authors": [
     "SilentImp <thesilentimp@gmail.com>"
   ],
-  "description": "Слайды для доклада о подходе «Offline first»",
+  "description": "Слайды для доклада «Кодстайл и насилие»",
   "license": "MIT",
   "private": true,
   "dependencies": {

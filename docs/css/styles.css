@@ -969,8 +969,9 @@ article.cover:after {
 article.cover .container {
   position: absolute;
   top: 240px;
-  left: 0;
-  right: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 article.cover h1 {
   font-size: 120px;
