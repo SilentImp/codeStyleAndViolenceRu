@@ -701,8 +701,7 @@ article {
   width: 1200px;
   height: 675px;
   margin: 20px auto;
-  background-color: #f4f4f4;
-  background-image: url("../images/slide.png");
+  background-color: #fff;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -979,7 +978,8 @@ article.cover h1 {
   font-weight: normal;
   font-style: normal;
   color: #ed3f23;
-  text-align: center;
+  text-align: left;
+  letter-spacing: 5px;
 }
 article.cover h1 b {
   font-size: 50px;
