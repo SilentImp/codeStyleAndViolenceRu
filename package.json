@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "coffee-script": "*",
-    "gulp": "^3.0.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "*",
     "gulp-coffee": "*",
     "gulp-concat": "*",
